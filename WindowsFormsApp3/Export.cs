@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
             dr = sq.ExecuteReader();
             while (dr.Read())
             {
-                listView1.Items.Add(new ListViewItem(new[] { id++.ToString(),
+                listView1.Items.Add(new ListViewItem(new[] { 
                                                              dr["particular"].ToString(),
                                                              dr["receiptno"].ToString(),
                                                              dr["amount"].ToString(),
@@ -103,21 +103,20 @@ namespace WindowsFormsApp3
         
         private void itemaddbutton_Click(object sender, EventArgs e)
         {
-            int id = 1;
             if (particularsbox.Text == "")
                 return;
-            SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
-            scn.Open();
-            SQLiteCommand sq;
-            sq = new SQLiteCommand("select * from exportfileparticulars where fileno = '" + filenobox.Text + "'", scn);
-            SQLiteDataReader dr = sq.ExecuteReader();
-            while (dr.Read())
-            {
-                id++;
-            }
+            //SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+            //scn.Open();
+            //SQLiteCommand sq;
+            //sq = new SQLiteCommand("select * from exportfileparticulars where fileno = '" + filenobox.Text + "'", scn);
+            //SQLiteDataReader dr = sq.ExecuteReader();
+            //while (dr.Read())
+            //{
+            //    id++;
+            //}
             ListViewItem itm = new ListViewItem();
-            itm.Text = id.ToString();
-            itm.SubItems.Add(particularsbox.Text);
+            itm.Text = particularsbox.Text;
+            //itm.SubItems.Add(particularsbox.Text);
             itm.SubItems.Add(receiptnobox.Text);
             itm.SubItems.Add(amountbox.Text);
             itm.SubItems.Add(remarksbox.Text);
@@ -180,8 +179,7 @@ namespace WindowsFormsApp3
                    listView1.Items[i].SubItems[0].Text,
                    listView1.Items[i].SubItems[1].Text,
                    listView1.Items[i].SubItems[2].Text,
-                   listView1.Items[i].SubItems[3].Text,
-                   listView1.Items[i].SubItems[4].Text), scn);
+                   listView1.Items[i].SubItems[3].Text), scn);
                 sq.ExecuteNonQuery();
             }
 

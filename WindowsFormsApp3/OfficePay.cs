@@ -30,10 +30,15 @@ namespace WindowsFormsApp3
             SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
             scn.Open();
             SQLiteCommand sq;
+
+            sq = new SQLiteCommand("delete from pay where fileno = '" + fileno.Text + "' and payer = '" + payer.Text + "' and officevoucher = '1'", scn);
+            sq.ExecuteNonQuery();
+
+
             sq = new SQLiteCommand(String.Format("insert into pay (date,payer,fileno,slipno,amount,received,remarks,officevoucher) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
                dateTimePicker1.Text,
                payer.Text,
-               fileno.Text+" Ref",
+               fileno.Text,
                slipno.Text,
                amount.Text,
                receive.Text,

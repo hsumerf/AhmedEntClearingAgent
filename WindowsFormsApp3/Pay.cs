@@ -23,19 +23,19 @@ namespace WindowsFormsApp3
             payer.Items.AddRange(Sqlite.LoadClients());
             fileno.Items.AddRange(Sqlite.LoadFiles());
 
-            SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
-            scn.Open();
+            //SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+            //scn.Open();
 
-            SQLiteCommand sq = new SQLiteCommand("select received, remarks from pay where fileno = '" + fileno.Text + "' and receivecheck = '1'", scn);
-            SQLiteDataReader dr = sq.ExecuteReader();
+            //SQLiteCommand sq = new SQLiteCommand("select received, remarks from pay where fileno = '" + fileno.Text + "' and receivecheck = '1'", scn);
+            //SQLiteDataReader dr = sq.ExecuteReader();
 
-            while (dr.Read())
-            {
-                receive.Text = dr["received"].ToString();
-                remarks.Text = dr["remarks"].ToString();
-            }
+            //while (dr.Read())
+            //{
+            //    receive.Text = dr["received"].ToString();
+            //    remarks.Text = dr["remarks"].ToString();
+            //}
             
-            scn.Close();
+            //scn.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -197,5 +197,9 @@ namespace WindowsFormsApp3
             System.IO.File.WriteAllText(path, CVS.ToString());
             Process.Start(path);
         }
+        public static string RoundOff(Decimal num)
+        {
+            return Convert.ToString(Math.Round(num));
+        }
     }
 }

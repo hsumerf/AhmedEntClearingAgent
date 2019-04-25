@@ -187,8 +187,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -204,5 +202,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox nameBox;
         private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.ListView listView1;
     }
 }

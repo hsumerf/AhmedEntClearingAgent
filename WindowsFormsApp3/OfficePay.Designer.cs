@@ -48,7 +48,7 @@
             // receive
             // 
             this.receive.Location = new System.Drawing.Point(309, 310);
-            this.receive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.receive.Margin = new System.Windows.Forms.Padding(4);
             this.receive.Name = "receive";
             this.receive.Size = new System.Drawing.Size(245, 22);
             this.receive.TabIndex = 5;
@@ -87,7 +87,7 @@
             // slipno
             // 
             this.slipno.Location = new System.Drawing.Point(309, 217);
-            this.slipno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.slipno.Margin = new System.Windows.Forms.Padding(4);
             this.slipno.Name = "slipno";
             this.slipno.Size = new System.Drawing.Size(245, 22);
             this.slipno.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.payer.FormattingEnabled = true;
             this.payer.Location = new System.Drawing.Point(313, 126);
-            this.payer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.payer.Margin = new System.Windows.Forms.Padding(4);
             this.payer.Name = "payer";
             this.payer.Size = new System.Drawing.Size(245, 24);
             this.payer.Sorted = true;
@@ -117,7 +117,7 @@
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(313, 73);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
             this.dateTimePicker1.TabIndex = 0;
@@ -136,7 +136,7 @@
             // amount
             // 
             this.amount.Location = new System.Drawing.Point(309, 270);
-            this.amount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.amount.Margin = new System.Windows.Forms.Padding(4);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(245, 22);
             this.amount.TabIndex = 4;
@@ -145,7 +145,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(459, 438);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 8;
@@ -166,7 +166,7 @@
             // remarks
             // 
             this.remarks.Location = new System.Drawing.Point(311, 350);
-            this.remarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remarks.Margin = new System.Windows.Forms.Padding(4);
             this.remarks.Multiline = true;
             this.remarks.Name = "remarks";
             this.remarks.Size = new System.Drawing.Size(245, 64);
@@ -186,7 +186,7 @@
             // 
             this.fileno.FormattingEnabled = true;
             this.fileno.Location = new System.Drawing.Point(309, 174);
-            this.fileno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fileno.Margin = new System.Windows.Forms.Padding(4);
             this.fileno.Name = "fileno";
             this.fileno.Size = new System.Drawing.Size(245, 24);
             this.fileno.Sorted = true;
@@ -228,7 +228,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox slipno;
-        private System.Windows.Forms.ComboBox payer;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
@@ -237,6 +236,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox remarks;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox fileno;
+        public System.Windows.Forms.ComboBox payer;
+        public System.Windows.Forms.ComboBox fileno;
     }
 }

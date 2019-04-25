@@ -44,12 +44,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.mainComboBox = new System.Windows.Forms.ComboBox();
+            this.subComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1183, 529);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 26);
             this.button1.TabIndex = 90;
@@ -81,6 +84,7 @@
             this.listView1.TabIndex = 89;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
             // 
             // columnHeader1
             // 
@@ -139,7 +143,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(528, 39);
+            this.button2.Location = new System.Drawing.Point(394, 32);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(59, 27);
@@ -151,28 +155,65 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 49);
+            this.label4.Location = new System.Drawing.Point(756, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 91;
             this.label4.Text = "Name";
+            this.label4.Visible = false;
             // 
             // nameBox
             // 
             this.nameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.nameBox.FormattingEnabled = true;
-            this.nameBox.Location = new System.Drawing.Point(221, 42);
+            this.nameBox.Location = new System.Drawing.Point(836, 27);
             this.nameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(287, 24);
             this.nameBox.Sorted = true;
             this.nameBox.TabIndex = 87;
+            this.nameBox.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "Search by";
+            // 
+            // mainComboBox
+            // 
+            this.mainComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mainComboBox.FormattingEnabled = true;
+            this.mainComboBox.Items.AddRange(new object[] {
+            "Customer Ref No",
+            "File No",
+            "Client Name"});
+            this.mainComboBox.Location = new System.Drawing.Point(16, 34);
+            this.mainComboBox.Name = "mainComboBox";
+            this.mainComboBox.Size = new System.Drawing.Size(183, 24);
+            this.mainComboBox.TabIndex = 93;
+            this.mainComboBox.SelectedIndexChanged += new System.EventHandler(this.mainComboBox_SelectedIndexChanged);
+            // 
+            // subComboBox
+            // 
+            this.subComboBox.FormattingEnabled = true;
+            this.subComboBox.Location = new System.Drawing.Point(205, 34);
+            this.subComboBox.Name = "subComboBox";
+            this.subComboBox.Size = new System.Drawing.Size(183, 24);
+            this.subComboBox.TabIndex = 94;
+            this.subComboBox.SelectedIndexChanged += new System.EventHandler(this.subComboBox_SelectedIndexChanged);
             // 
             // AccountRegester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 610);
+            this.Controls.Add(this.subComboBox);
+            this.Controls.Add(this.mainComboBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
@@ -205,5 +246,8 @@
         private System.Windows.Forms.ComboBox nameBox;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox mainComboBox;
+        private System.Windows.Forms.ComboBox subComboBox;
     }
 }

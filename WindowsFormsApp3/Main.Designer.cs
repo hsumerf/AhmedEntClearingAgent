@@ -135,6 +135,7 @@
             // 
             // button7
             // 
+            this.button7.Enabled = false;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.Location = new System.Drawing.Point(407, 161);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

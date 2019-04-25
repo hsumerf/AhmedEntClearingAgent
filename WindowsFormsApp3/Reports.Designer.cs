@@ -53,13 +53,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // total_Rec
             // 
             this.total_Rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_Rec.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.total_Rec.Location = new System.Drawing.Point(1011, 569);
+            this.total_Rec.Location = new System.Drawing.Point(948, 558);
             this.total_Rec.Name = "total_Rec";
             this.total_Rec.Size = new System.Drawing.Size(113, 15);
             this.total_Rec.TabIndex = 59;
@@ -70,7 +71,7 @@
             // 
             this.total_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_amount.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.total_amount.Location = new System.Drawing.Point(884, 569);
+            this.total_amount.Location = new System.Drawing.Point(821, 558);
             this.total_amount.Name = "total_amount";
             this.total_amount.Size = new System.Drawing.Size(109, 15);
             this.total_amount.TabIndex = 58;
@@ -83,7 +84,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(948, 602);
+            this.label3.Location = new System.Drawing.Point(885, 591);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 57;
@@ -91,7 +92,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(167, 569);
+            this.button3.Location = new System.Drawing.Point(197, 557);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 32);
@@ -103,7 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(701, 60);
+            this.label2.Location = new System.Drawing.Point(966, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 17);
             this.label2.TabIndex = 54;
@@ -112,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(452, 62);
+            this.label1.Location = new System.Drawing.Point(793, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 17);
             this.label1.TabIndex = 53;
@@ -122,7 +123,7 @@
             // 
             this.dateTimeTo.CustomFormat = "yyyy-MM-dd";
             this.dateTimeTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeTo.Location = new System.Drawing.Point(751, 57);
+            this.dateTimeTo.Location = new System.Drawing.Point(969, 47);
             this.dateTimeTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeTo.Name = "dateTimeTo";
             this.dateTimeTo.Size = new System.Drawing.Size(167, 22);
@@ -133,7 +134,7 @@
             // 
             this.dateTimeFrom.CustomFormat = "yyyy-MM-dd";
             this.dateTimeFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeFrom.Location = new System.Drawing.Point(499, 57);
+            this.dateTimeFrom.Location = new System.Drawing.Point(796, 47);
             this.dateTimeFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeFrom.Name = "dateTimeFrom";
             this.dateTimeFrom.Size = new System.Drawing.Size(167, 22);
@@ -142,7 +143,7 @@
             // 
             // DailyReports
             // 
-            this.DailyReports.Location = new System.Drawing.Point(947, 57);
+            this.DailyReports.Location = new System.Drawing.Point(1142, 45);
             this.DailyReports.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DailyReports.Name = "DailyReports";
             this.DailyReports.Size = new System.Drawing.Size(87, 27);
@@ -154,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 62);
+            this.label4.Location = new System.Drawing.Point(9, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 51;
@@ -164,7 +165,7 @@
             // 
             this.nameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.nameBox.FormattingEnabled = true;
-            this.nameBox.Location = new System.Drawing.Point(124, 58);
+            this.nameBox.Location = new System.Drawing.Point(12, 47);
             this.nameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(313, 24);
@@ -187,7 +188,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(75, 100);
+            this.listView1.Location = new System.Drawing.Point(12, 89);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
@@ -237,7 +238,7 @@
             // 
             this.total_bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_bal.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.total_bal.Location = new System.Drawing.Point(1155, 569);
+            this.total_bal.Location = new System.Drawing.Point(1092, 558);
             this.total_bal.Name = "total_bal";
             this.total_bal.Size = new System.Drawing.Size(109, 15);
             this.total_bal.TabIndex = 63;
@@ -249,7 +250,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(1215, 602);
+            this.label6.Location = new System.Drawing.Point(1152, 591);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 18);
             this.label6.TabIndex = 64;
@@ -260,7 +261,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(1083, 602);
+            this.label7.Location = new System.Drawing.Point(1020, 591);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 18);
             this.label7.TabIndex = 65;
@@ -268,7 +269,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(260, 569);
+            this.button1.Location = new System.Drawing.Point(290, 557);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 32);
@@ -279,7 +280,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(379, 569);
+            this.button2.Location = new System.Drawing.Point(409, 557);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 32);
@@ -290,7 +291,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(75, 569);
+            this.button4.Location = new System.Drawing.Point(105, 557);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 32);
@@ -299,11 +300,23 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // editBtn
+            // 
+            this.editBtn.Location = new System.Drawing.Point(12, 558);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(85, 32);
+            this.editBtn.TabIndex = 67;
+            this.editBtn.Text = "Edit";
+            this.editBtn.UseVisualStyleBackColor = true;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 657);
+            this.ClientSize = new System.Drawing.Size(1371, 635);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -357,5 +370,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button editBtn;
     }
 }

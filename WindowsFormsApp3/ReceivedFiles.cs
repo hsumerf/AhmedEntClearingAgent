@@ -26,11 +26,14 @@ namespace WindowsFormsApp3
             }
             else
             {
-                Pay recievings = new Pay();
-                recievings.payer.Text = listView1.SelectedItems[0].SubItems[3].Text;
-                recievings.fileno.Text = listView1.SelectedItems[0].SubItems[1].Text;
-                recievings.slipno.Text = listView1.SelectedItems[0].SubItems[9].Text;
-                recievings.Show();
+                Pay receivings = new Pay();
+                receivings.dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[0].Text;
+                receivings.payer.Text = listView1.SelectedItems[0].SubItems[3].Text;
+                receivings.fileno.Text = listView1.SelectedItems[0].SubItems[1].Text;
+                receivings.slipno.Text = listView1.SelectedItems[0].SubItems[9].Text;
+                receivings.receive.Text = listView1.SelectedItems[0].SubItems[7].Text;
+                receivings.remarks.Text = listView1.SelectedItems[0].SubItems[10].Text;
+                receivings.Show();
                 this.Close();
             }
         }
@@ -55,7 +58,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                sq = new SQLiteCommand("select files.date,files.fileno,files.invoiceno,files.name,files.customerrefno,files.qtycontainer,files.invamount,pay.received as receive,pay.slipno,pay.remarks from files inner join pay on files.fileno = pay.fileno  where pay.payer = '" + nameBox.Text + "' and files.name = '" + nameBox.Text + "'", scn);
+                sq = new SQLiteCommand("select files.date,files.fileno,files.invoiceno,files.name,files.customerrefno,files.qtycontainer,files.invamount,pay.received as receive,pay.slipno,pay.remarks from files inner join pay on files.fileno = pay.fileno  where pay.payer = '" + nameBox.Text + "' and files.name = '" + nameBox.Text + "' and receiveformcheck = '1'", scn);
                 dr = sq.ExecuteReader();
                 // String tot ="10.5", rec = "5.5";
                 while (dr.Read())
@@ -68,9 +71,9 @@ namespace WindowsFormsApp3
                     report[3] = dr["name"].ToString();
                     report[4] = dr["customerrefno"].ToString();
                     report[5] = dr["qtycontainer"].ToString();
-                    report[6] = dr["invamount"].ToString();
-                    report[7] = dr["receive"].ToString();
-                    report[8] = (float.Parse(report[6]) - float.Parse(report[7])).ToString();
+                    report[6] = Math.Round(Convert.ToDecimal(dr["invamount"])).ToString();
+                    report[7] = Math.Round(Convert.ToDecimal(dr["receive"])).ToString();
+                    report[8] = Math.Round((float.Parse(report[6]) - float.Parse(report[7]))).ToString();
                     report[9] = dr["slipno"].ToString();
                     report[10] = dr["remarks"].ToString();
                     // reportList.Add(new String[] { report[0], report[1], report[2], report[3], report[4], report[5], report[6], report[7], report[8], report[9], report[10] });

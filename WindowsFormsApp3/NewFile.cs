@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
             scn.Open();
             SQLiteCommand sq;
 
-            sq = new SQLiteCommand("select fileno,name,ntnno,date from files", scn);
+            sq = new SQLiteCommand("select fileno,name,date from files", scn);
             SQLiteDataReader dr = sq.ExecuteReader();
             int id = 1;
             while (dr.Read())
@@ -33,7 +33,6 @@ namespace WindowsFormsApp3
                 listView1.Items.Add(new ListViewItem(new[] {   id++.ToString(),
                                                               dr["fileno"].ToString(),
                                                               dr["name"].ToString(),
-                                                              dr["ntnno"].ToString(),
                                                               dr["date"].ToString()  }));
             }
         }
@@ -43,7 +42,7 @@ namespace WindowsFormsApp3
             scn.Open();
             SQLiteCommand sq;
 
-            sq = new SQLiteCommand(String.Format("insert into files (fileno,name,ntnno,date) values ('{0}','{1}','{2}','{3}')",
+            sq = new SQLiteCommand(String.Format("insert into files (fileno,name,date) values ('{0}','{1}','{2}')",
                  filenobox.Text, namebox.Text, ntnnobox.Text, dateTimePicker1.Text), scn);
 
             sq.ExecuteNonQuery();
@@ -71,6 +70,12 @@ namespace WindowsFormsApp3
         {
             NewClient newclient = new NewClient();
             newclient.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            namebox.Items.Clear();
+            namebox.Items.AddRange(Sqlite.LoadClients());
         }
     }
 }

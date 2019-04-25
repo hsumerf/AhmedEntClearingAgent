@@ -353,22 +353,6 @@ namespace WindowsFormsApp3
                 MessageBox.Show("Please select any particular", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-        private void editBtn_Click(object sender, EventArgs e)
-        {
-            OfficePayVoucher officePayVoucher = new OfficePayVoucher();
-
-            officePayVoucher.dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[0].Text;
-            officePayVoucher.payer.Text = listView1.SelectedItems[0].SubItems[1].Text;
-            officePayVoucher.fileno.Text = listView1.SelectedItems[0].SubItems[2].Text;
-            officePayVoucher.slipno.Text = listView1.SelectedItems[0].SubItems[3].Text;
-            officePayVoucher.remarks.Text = listView1.SelectedItems[0].SubItems[4].Text;
-            officePayVoucher.amount.Text = listView1.SelectedItems[0].SubItems[5].Text;
-            officePayVoucher.receive.Text = listView1.SelectedItems[0].SubItems[6].Text;
-
-
-            officePayVoucher.ShowDialog();
-        }
     }
 }
 

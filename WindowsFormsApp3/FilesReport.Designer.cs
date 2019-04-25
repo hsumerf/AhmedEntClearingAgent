@@ -53,14 +53,14 @@
             this.Qty,
             this.columnHeader2});
             this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(23, 48);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(31, 59);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(867, 345);
+            this.listView1.Size = new System.Drawing.Size(1155, 424);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -95,32 +95,32 @@
             // 
             this.total_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total_amount.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.total_amount.Location = new System.Drawing.Point(592, 403);
-            this.total_amount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.total_amount.Location = new System.Drawing.Point(789, 496);
             this.total_amount.Name = "total_amount";
-            this.total_amount.Size = new System.Drawing.Size(70, 12);
+            this.total_amount.Size = new System.Drawing.Size(93, 15);
             this.total_amount.TabIndex = 86;
             this.total_amount.Text = "0";
             this.total_amount.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.total_amount.Click += new System.EventHandler(this.total_amount_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(533, 400);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(711, 492);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.Size = new System.Drawing.Size(46, 18);
             this.label3.TabIndex = 85;
             this.label3.Text = "Total";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 19);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(469, 17);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 22);
+            this.button2.Size = new System.Drawing.Size(69, 27);
             this.button2.TabIndex = 1;
             this.button2.Text = "Filter";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,29 +129,31 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 24);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 84;
             this.label4.Text = "Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // nameBox
             // 
             this.nameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.nameBox.FormattingEnabled = true;
-            this.nameBox.Location = new System.Drawing.Point(60, 21);
-            this.nameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameBox.Location = new System.Drawing.Point(100, 22);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(223, 21);
+            this.nameBox.Size = new System.Drawing.Size(296, 24);
             this.nameBox.Sorted = true;
             this.nameBox.TabIndex = 0;
+            this.nameBox.SelectedIndexChanged += new System.EventHandler(this.nameBox_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(795, 399);
+            this.button1.Location = new System.Drawing.Point(1060, 491);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 21);
+            this.button1.Size = new System.Drawing.Size(125, 26);
             this.button1.TabIndex = 3;
             this.button1.Text = "Export";
             this.button1.UseVisualStyleBackColor = true;
@@ -159,9 +161,9 @@
             // 
             // FilesReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 435);
+            this.ClientSize = new System.Drawing.Size(1237, 606);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.total_amount);
@@ -169,7 +171,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nameBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FilesReport";
             this.Text = "FilesReport";
             this.Load += new System.EventHandler(this.FilesReport_Load);

@@ -210,11 +210,11 @@
     <Compile Include="NewFile.Designer.cs">
       <DependentUpon>NewFile.cs</DependentUpon>
     </Compile>
-    <Compile Include="OfficePayVoucher.cs">
+    <Compile Include="OfficePay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OfficePayVoucher.Designer.cs">
-      <DependentUpon>OfficePayVoucher.cs</DependentUpon>
+    <Compile Include="OfficePay.Designer.cs">
+      <DependentUpon>OfficePay.cs</DependentUpon>
     </Compile>
     <Compile Include="OutstandingCrystalReport.cs">
       <AutoGen>True</AutoGen>
@@ -257,11 +257,11 @@
     <Compile Include="Ledger.Designer.cs">
       <DependentUpon>Ledger.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerReceiving.cs">
+    <Compile Include="Pay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerReceiving.Designer.cs">
-      <DependentUpon>CustomerReceiving.cs</DependentUpon>
+    <Compile Include="Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -351,8 +351,8 @@
     <EmbeddedResource Include="NewFile.resx">
       <DependentUpon>NewFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OfficePayVoucher.resx">
-      <DependentUpon>OfficePayVoucher.cs</DependentUpon>
+    <EmbeddedResource Include="OfficePay.resx">
+      <DependentUpon>OfficePay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OutstandingCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -370,8 +370,8 @@
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerReceiving.resx">
-      <DependentUpon>CustomerReceiving.cs</DependentUpon>
+    <EmbeddedResource Include="Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

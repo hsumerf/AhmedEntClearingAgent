@@ -44,16 +44,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.ComboBox();
-            this.mainComboBox = new System.Windows.Forms.ComboBox();
-            this.subComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(930, 417);
+            this.button1.Location = new System.Drawing.Point(1183, 529);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 21);
+            this.button1.Size = new System.Drawing.Size(115, 26);
             this.button1.TabIndex = 90;
             this.button1.Text = "Export";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,16 +73,14 @@
             this.columnHeader11});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(9, 67);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
+            this.listView1.Location = new System.Drawing.Point(12, 83);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1011, 345);
+            this.listView1.Size = new System.Drawing.Size(1347, 424);
             this.listView1.TabIndex = 89;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listView1_ColumnClick);
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -143,10 +139,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(268, 24);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(528, 39);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(44, 22);
+            this.button2.Size = new System.Drawing.Size(59, 27);
             this.button2.TabIndex = 88;
             this.button2.Text = "Filter";
             this.button2.UseVisualStyleBackColor = true;
@@ -155,72 +151,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(628, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(141, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 91;
             this.label4.Text = "Name";
-            this.label4.Visible = false;
             // 
             // nameBox
             // 
             this.nameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.nameBox.FormattingEnabled = true;
-            this.nameBox.Location = new System.Drawing.Point(667, 25);
-            this.nameBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nameBox.Location = new System.Drawing.Point(221, 42);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(216, 21);
+            this.nameBox.Size = new System.Drawing.Size(287, 24);
             this.nameBox.Sorted = true;
             this.nameBox.TabIndex = 87;
-            this.nameBox.Visible = false;
-            // 
-            // mainComboBox
-            // 
-            this.mainComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mainComboBox.FormattingEnabled = true;
-            this.mainComboBox.Items.AddRange(new object[] {
-            "Customer Ref No",
-            "File No",
-            "Client Name"});
-            this.mainComboBox.Location = new System.Drawing.Point(15, 25);
-            this.mainComboBox.Name = "mainComboBox";
-            this.mainComboBox.Size = new System.Drawing.Size(121, 21);
-            this.mainComboBox.TabIndex = 92;
-            this.mainComboBox.SelectedIndexChanged += new System.EventHandler(this.mainComboBox_SelectedIndexChanged);
-            // 
-            // subComboBox
-            // 
-            this.subComboBox.FormattingEnabled = true;
-            this.subComboBox.Location = new System.Drawing.Point(142, 25);
-            this.subComboBox.Name = "subComboBox";
-            this.subComboBox.Size = new System.Drawing.Size(121, 21);
-            this.subComboBox.TabIndex = 93;
-            this.subComboBox.SelectedIndexChanged += new System.EventHandler(this.subComboBox_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 94;
-            this.label1.Text = "Search by";
             // 
             // AccountRegester
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 456);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.subComboBox);
-            this.Controls.Add(this.mainComboBox);
+            this.ClientSize = new System.Drawing.Size(1371, 610);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nameBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AccountRegester";
             this.Text = "AccountRegister";
             this.Load += new System.EventHandler(this.AccountRegester_Load);
@@ -247,8 +205,5 @@
         private System.Windows.Forms.ComboBox nameBox;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ComboBox mainComboBox;
-        private System.Windows.Forms.ComboBox subComboBox;
-        private System.Windows.Forms.Label label1;
     }
 }

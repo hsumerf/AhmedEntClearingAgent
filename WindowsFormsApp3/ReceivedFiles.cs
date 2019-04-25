@@ -26,7 +26,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                CustomerReceiving recievings = new CustomerReceiving();
+                Pay recievings = new Pay();
                 recievings.payer.Text = listView1.SelectedItems[0].SubItems[3].Text;
                 recievings.fileno.Text = listView1.SelectedItems[0].SubItems[1].Text;
                 recievings.slipno.Text = listView1.SelectedItems[0].SubItems[9].Text;

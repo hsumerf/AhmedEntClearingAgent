@@ -28,7 +28,7 @@ namespace WindowsFormsApp3
 
         private void button5_Click(object sender, EventArgs e)
         {
-            CustomerReceiving pay = new CustomerReceiving();
+            Pay pay = new Pay();
             pay.Show();
         }
 
@@ -72,7 +72,7 @@ namespace WindowsFormsApp3
 
         private void button8_Click(object sender, EventArgs e)
         {
-            OfficePayVoucher officepay = new OfficePayVoucher();
+            OfficePay officepay = new OfficePay();
             officepay.Show();
         }
 

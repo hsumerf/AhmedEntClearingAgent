@@ -77,7 +77,9 @@ namespace WindowsFormsApp3
                     reportList[i][4] = qty;
                     listView1.Items.Add(new ListViewItem(new[] { reportList[i][0], reportList[i][1], reportList[i][2], reportList[i][3], reportList[i][4], reportList[i][5] }));
                 }
-                
+
+
+               
             }
 
             total_amount.Text = totalAmount.ToString();
@@ -114,6 +116,29 @@ namespace WindowsFormsApp3
             Process.Start(path);
         }
 
-        
+        private void total_amount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

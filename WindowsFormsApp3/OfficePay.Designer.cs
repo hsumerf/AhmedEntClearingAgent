@@ -43,11 +43,13 @@
             this.remarks = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.fileno = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.titleBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // receive
             // 
-            this.receive.Location = new System.Drawing.Point(309, 310);
+            this.receive.Location = new System.Drawing.Point(164, 200);
             this.receive.Margin = new System.Windows.Forms.Padding(4);
             this.receive.Name = "receive";
             this.receive.Size = new System.Drawing.Size(245, 22);
@@ -57,7 +59,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(163, 310);
+            this.label7.Location = new System.Drawing.Point(10, 203);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 17);
@@ -67,7 +69,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 174);
+            this.label6.Location = new System.Drawing.Point(13, 111);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 17);
@@ -77,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(163, 220);
+            this.label4.Location = new System.Drawing.Point(13, 143);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 17);
@@ -86,7 +88,7 @@
             // 
             // slipno
             // 
-            this.slipno.Location = new System.Drawing.Point(309, 217);
+            this.slipno.Location = new System.Drawing.Point(164, 140);
             this.slipno.Margin = new System.Windows.Forms.Padding(4);
             this.slipno.Name = "slipno";
             this.slipno.Size = new System.Drawing.Size(245, 22);
@@ -95,7 +97,7 @@
             // payer
             // 
             this.payer.FormattingEnabled = true;
-            this.payer.Location = new System.Drawing.Point(313, 126);
+            this.payer.Location = new System.Drawing.Point(164, 43);
             this.payer.Margin = new System.Windows.Forms.Padding(4);
             this.payer.Name = "payer";
             this.payer.Size = new System.Drawing.Size(245, 24);
@@ -105,7 +107,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(165, 75);
+            this.label5.Location = new System.Drawing.Point(13, 18);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 17);
@@ -116,17 +118,17 @@
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(313, 73);
+            this.dateTimePicker1.Location = new System.Drawing.Point(164, 13);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
             this.dateTimePicker1.TabIndex = 0;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 4, 16, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2019, 4, 26, 0, 0, 0, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(161, 268);
+            this.label3.Location = new System.Drawing.Point(13, 170);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
@@ -135,7 +137,7 @@
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(309, 270);
+            this.amount.Location = new System.Drawing.Point(164, 170);
             this.amount.Margin = new System.Windows.Forms.Padding(4);
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(245, 22);
@@ -144,7 +146,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(459, 438);
+            this.button3.Location = new System.Drawing.Point(309, 385);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
@@ -156,7 +158,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 350);
+            this.label1.Location = new System.Drawing.Point(13, 233);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
@@ -165,17 +167,17 @@
             // 
             // remarks
             // 
-            this.remarks.Location = new System.Drawing.Point(311, 350);
+            this.remarks.Location = new System.Drawing.Point(164, 230);
             this.remarks.Margin = new System.Windows.Forms.Padding(4);
             this.remarks.Multiline = true;
             this.remarks.Name = "remarks";
-            this.remarks.Size = new System.Drawing.Size(245, 64);
+            this.remarks.Size = new System.Drawing.Size(245, 147);
             this.remarks.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(165, 130);
+            this.label2.Location = new System.Drawing.Point(13, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
@@ -185,18 +187,38 @@
             // fileno
             // 
             this.fileno.FormattingEnabled = true;
-            this.fileno.Location = new System.Drawing.Point(309, 174);
+            this.fileno.Location = new System.Drawing.Point(164, 108);
             this.fileno.Margin = new System.Windows.Forms.Padding(4);
             this.fileno.Name = "fileno";
             this.fileno.Size = new System.Drawing.Size(245, 24);
             this.fileno.Sorted = true;
             this.fileno.TabIndex = 99;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 78);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 17);
+            this.label8.TabIndex = 100;
+            this.label8.Text = "Title";
+            // 
+            // titleBox
+            // 
+            this.titleBox.Location = new System.Drawing.Point(164, 78);
+            this.titleBox.Margin = new System.Windows.Forms.Padding(4);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(245, 22);
+            this.titleBox.TabIndex = 101;
+            // 
             // OfficePay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 539);
+            this.ClientSize = new System.Drawing.Size(463, 436);
+            this.Controls.Add(this.titleBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.fileno);
             this.Controls.Add(this.receive);
             this.Controls.Add(this.label7);
@@ -238,5 +260,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox payer;
         public System.Windows.Forms.ComboBox fileno;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox titleBox;
     }
 }

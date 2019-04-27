@@ -271,5 +271,10 @@ namespace WindowsFormsApp3
 
             }
         }
+
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            comboBox2_SelectedIndexChanged(this, e);
+        }
     }
 }

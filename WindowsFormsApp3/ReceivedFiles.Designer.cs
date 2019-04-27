@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.ComboBox();
             this.editBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -168,18 +169,30 @@
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Location = new System.Drawing.Point(424, 521);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(175, 43);
+            this.deleteBtn.TabIndex = 98;
+            this.deleteBtn.Text = "Delete Entry";
+            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
             // ReceivedFiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 585);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.filterBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nameBox);
             this.Name = "ReceivedFiles";
-            this.Text = "ReceivedFiles";
+            this.Text = "Receiving Reports";
             this.Load += new System.EventHandler(this.ReceivedFiles_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,5 +216,6 @@
         private System.Windows.Forms.ComboBox nameBox;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button deleteBtn;
     }
 }

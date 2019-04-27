@@ -195,7 +195,7 @@ namespace WindowsFormsApp3
                         sqliteDataReader["qtycontainer"].ToString(),
                         sqliteDataReader["invamount"].ToString(),
                         sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) + Convert.ToInt32(sqliteDataReader["receive"])),
+                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
                         sqliteDataReader["chequeno"].ToString(),
                         sqliteDataReader["remarks"].ToString()}));
                 }
@@ -224,7 +224,7 @@ namespace WindowsFormsApp3
                         sqliteDataReader["qtycontainer"].ToString(),
                         sqliteDataReader["invamount"].ToString(),
                         sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) + Convert.ToInt32(sqliteDataReader["receive"])),
+                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
                         sqliteDataReader["chequeno"].ToString(),
                         sqliteDataReader["remarks"].ToString()}));
 
@@ -243,6 +243,11 @@ namespace WindowsFormsApp3
                 sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, pay.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno, pay.remarks  from pay inner join files on files.fileno = pay.fileno where pay.payer = '" + subComboBox.Text + "' group by pay.fileno", sqliteConnection);
                 sqliteDataReader = sqliteCommand.ExecuteReader();
 
+                while (sqliteDataReader.Read())
+                {
+                    MessageBox.Show(sqliteDataReader["payer"].ToString());
+                }
+
                 listView1.Items.Clear();
 
                 SQLiteCommand comm = new SQLiteCommand("select chequeno from pay inner join files on files.fileno = pay.fileno where payer = '" + subComboBox.Text + "' and files.fileno = pay.fileno and receiveformcheck = '1'", sqliteConnection);
@@ -250,7 +255,6 @@ namespace WindowsFormsApp3
 
                 while (sqliteDataReader.Read())
                 {
-
                     string tempStr = "";
 
                     while (dr.Read())
@@ -271,7 +275,7 @@ namespace WindowsFormsApp3
                         sqliteDataReader["qtycontainer"].ToString(),
                         sqliteDataReader["invamount"].ToString(),
                         sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) + Convert.ToInt32(sqliteDataReader["receive"])),
+                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
                         //sqliteDataReader["chequeno"].ToString(),
                         tempStr,
                         sqliteDataReader["remarks"].ToString()}));

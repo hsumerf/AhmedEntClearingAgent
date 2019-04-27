@@ -18,6 +18,7 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
+        public bool isUpdate = false;
         private void Pay_Load(object sender, EventArgs e)
         {
             payer.Items.AddRange(Sqlite.LoadClients());
@@ -47,23 +48,50 @@ namespace WindowsFormsApp3
             }
             else
             {
-                SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
-                scn.Open();
-                SQLiteCommand sq;
-                sq = new SQLiteCommand(String.Format("insert into pay (date,payer,fileno,slipno,amount,received,remarks, receiveformcheck) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
-                   dateTimePicker1.Text,
-                   payer.Text,
-                   fileno.Text,
-                   slipno.Text,
-                   "0",
-                   receive.Text,
-                   remarks.Text,
-                   "1"), scn);
+                if (!isUpdate)
+                {
+                    SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+                    scn.Open();
+                    SQLiteCommand sq;
+                    sq = new SQLiteCommand(String.Format("insert into pay (date,payer,fileno,slipno,amount,received,remarks, receiveformcheck) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
+                       dateTimePicker1.Text,
+                       payer.Text,
+                       fileno.Text,
+                       slipno.Text,
+                       "0",
+                       receive.Text,
+                       remarks.Text,
+                       "1"), scn);
 
-                sq.ExecuteNonQuery();
+                    sq.ExecuteNonQuery();
 
-                MessageBox.Show("Data Saved successfully");
-                Close();
+                    MessageBox.Show("Data Saved successfully");
+                    Close();
+                }
+                else if (isUpdate)
+                {
+                    SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+                    scn.Open();
+                    SQLiteCommand sq;
+
+                    sq = new SQLiteCommand(String.Format("delete from pay where fileno = '" + fileno.Text + "' and payer = '" + payer.Text +"' and receiveformcheck = '1'"), scn);
+                    sq.ExecuteNonQuery();
+
+                    sq = new SQLiteCommand(String.Format("insert into pay (date,payer,fileno,slipno,amount,received,remarks, receiveformcheck) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
+                       dateTimePicker1.Text,
+                       payer.Text,
+                       fileno.Text,
+                       slipno.Text,
+                       "0",
+                       receive.Text,
+                       remarks.Text,
+                       "1"), scn);
+
+                    sq.ExecuteNonQuery();
+
+                    MessageBox.Show("Data Saved successfully");
+                    Close();
+                }
             }
         }
     }

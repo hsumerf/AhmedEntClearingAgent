@@ -45,6 +45,7 @@ namespace WindowsFormsApp3
                                                              dr["payer"].ToString(),
                                                              dr["fileno"].ToString(),
                                                              dr["slipno"].ToString(),
+                                                             dr["title"].ToString(),
                                                              dr["remarks"].ToString(),
                                                              dr["amount"].ToString(),
                                                              dr["received"].ToString() }));
@@ -361,11 +362,13 @@ namespace WindowsFormsApp3
             officePayVoucher.dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[0].Text;
             officePayVoucher.payer.Text = listView1.SelectedItems[0].SubItems[1].Text;
             officePayVoucher.fileno.Text = listView1.SelectedItems[0].SubItems[2].Text;
-            officePayVoucher.slipno.Text = listView1.SelectedItems[0].SubItems[3].Text;
-            officePayVoucher.remarks.Text = listView1.SelectedItems[0].SubItems[4].Text;
-            officePayVoucher.amount.Text = listView1.SelectedItems[0].SubItems[5].Text;
-            officePayVoucher.receive.Text = listView1.SelectedItems[0].SubItems[6].Text;
-
+            officePayVoucher.titleBox.Text = listView1.SelectedItems[0].SubItems[3].Text;
+            officePayVoucher.slipno.Text = listView1.SelectedItems[0].SubItems[4].Text;
+            officePayVoucher.remarks.Text = listView1.SelectedItems[0].SubItems[5].Text;
+            officePayVoucher.amount.Text = listView1.SelectedItems[0].SubItems[6].Text;
+            officePayVoucher.receive.Text = listView1.SelectedItems[0].SubItems[7].Text;
+            
+            officePayVoucher.isUpdate = true;
 
             officePayVoucher.ShowDialog();
         }

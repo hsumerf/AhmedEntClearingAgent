@@ -54,6 +54,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // total_Rec
@@ -181,6 +182,7 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader10,
+            this.columnHeader5,
             this.columnHeader1,
             this.columnHeader3,
             this.columnHeader7,
@@ -311,6 +313,11 @@
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Title";
+            this.columnHeader5.Width = 123;
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,5 +378,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

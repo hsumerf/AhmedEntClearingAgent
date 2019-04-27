@@ -33,6 +33,7 @@ namespace WindowsFormsApp3
                 receivings.slipno.Text = listView1.SelectedItems[0].SubItems[9].Text;
                 receivings.receive.Text = listView1.SelectedItems[0].SubItems[7].Text;
                 receivings.remarks.Text = listView1.SelectedItems[0].SubItems[10].Text;
+                receivings.isUpdate = true;
                 receivings.Show();
                 this.Close();
             }
@@ -100,6 +101,32 @@ namespace WindowsFormsApp3
         private void ReceivedFiles_Load(object sender, EventArgs e)
         {
             nameBox.Items.AddRange(Sqlite.LoadClients());
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure to delete this entry?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+                scn.Open();
+                SQLiteCommand sq;
+
+                sq = new SQLiteCommand("delete from pay where fileno = '" + listView1.SelectedItems[0].SubItems[1].ToString() + "' and payer = '" + listView1.SelectedItems[0].SubItems[3].ToString() + "' and receiveformcheck = '1'", scn);
+                sq.ExecuteNonQuery();
+
+                MessageBox.Show("Entry deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                scn.Close();
+
+                this.Close();
+            }
+            else
+            {
+
+            }
         }
     }
 }

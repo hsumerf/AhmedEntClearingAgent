@@ -149,7 +149,6 @@ namespace WindowsFormsApp3
                                                               sqliteDataReader["receiptno"].ToString(),
                                                               sqliteDataReader["quantity"].ToString(),
                                                               sqliteDataReader["rate"].ToString(),
-                                                              sqliteDataReader["rate"].ToString(),
                                                               sqliteDataReader["amount"].ToString(),
                                                               sqliteDataReader["remarks"].ToString()  }));
             }
@@ -1300,7 +1299,7 @@ namespace WindowsFormsApp3
                     //      sq = new SQLiteCommand("delete from pay where fileno = '" + filenobox.Text + "' and payer = '" + namebox.Text + "' and receivecheck='1' ", scn);
                     //     sq.ExecuteNonQuery();
 
-                    sqliteCommand = new SQLiteCommand("delete from pay where fileno = '" + filenobox.Text + "'", sqliteConnection);
+                    sqliteCommand = new SQLiteCommand("delete from pay where fileno = '" + filenobox.Text + "' and receivecheck = '1'", sqliteConnection);
                     sqliteCommand.ExecuteNonQuery();
 
 

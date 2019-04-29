@@ -831,7 +831,7 @@ namespace WindowsFormsApp3
             row["pay_totalNumberInWords"] = "";
             row["balance"] = Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text);
             row["file_invoice_no"] = file_invoiceBox.Text;
-            row["totalBalanceInWords"] = ConvertToWords((Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
+            row["totalBalanceInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
             //row["balance"] = 2;
             //row["totalBalanceInWords"] = "sd";
 

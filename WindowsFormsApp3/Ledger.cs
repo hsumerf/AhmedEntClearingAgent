@@ -72,12 +72,12 @@ namespace WindowsFormsApp3
             {
                 row = tempDataTable.NewRow();
                 row["Name"] = listView1.Items[i].SubItems[0].Text;
-                row["Amount"] = Convert.ToDouble(listView1.Items[i].SubItems[1].Text);
-                row["Received"] = Convert.ToDouble(listView1.Items[i].SubItems[2].Text);
-                row["Balance"] = Convert.ToDouble(listView1.Items[i].SubItems[3].Text);
-                row["TotalAmount"] = Convert.ToDouble(total_amount.Text);
-                row["TotalReceived"] = Convert.ToDouble(total_Rec.Text);
-                row["TotalBalance"] = Convert.ToDouble(total_balance.Text);
+                row["Amount"] = Math.Round(Convert.ToDouble(listView1.Items[i].SubItems[1].Text));
+                row["Received"] = Math.Round(Convert.ToDouble(listView1.Items[i].SubItems[2].Text));
+                row["Balance"] = Math.Round(Convert.ToDouble(listView1.Items[i].SubItems[3].Text));
+                row["TotalAmount"] = Math.Round(Convert.ToDouble(total_amount.Text));
+                row["TotalReceived"] = Math.Round(Convert.ToDouble(total_Rec.Text));
+                row["TotalBalance"] = Math.Round(Convert.ToDouble(total_balance.Text));
                 tempDataTable.Rows.Add(row);
             }
 

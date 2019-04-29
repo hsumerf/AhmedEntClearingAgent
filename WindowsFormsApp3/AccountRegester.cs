@@ -204,7 +204,7 @@ namespace WindowsFormsApp3
                 sqliteConnection.Close();
             }
 
-            if (mainComboBox.Text == "File No")
+            else if (mainComboBox.Text == "File No")
             {
                 sqliteConnection.Open();
 
@@ -234,7 +234,7 @@ namespace WindowsFormsApp3
                 sqliteConnection.Close();
             }
 
-            if (mainComboBox.Text == "Client Name")
+            else if (mainComboBox.Text == "Client Name")
             {
                 string[] report = new string[subComboBox.Items.Count];
 
@@ -243,10 +243,6 @@ namespace WindowsFormsApp3
                 sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, pay.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno, pay.remarks  from pay inner join files on files.fileno = pay.fileno where pay.payer = '" + subComboBox.Text + "' group by pay.fileno", sqliteConnection);
                 sqliteDataReader = sqliteCommand.ExecuteReader();
 
-                while (sqliteDataReader.Read())
-                {
-                    MessageBox.Show(sqliteDataReader["payer"].ToString());
-                }
 
                 listView1.Items.Clear();
 
@@ -260,7 +256,6 @@ namespace WindowsFormsApp3
                     while (dr.Read())
                     {
                         tempStr = dr["chequeno"].ToString();
-
                         if (tempStr != "")
                         {
                             break;

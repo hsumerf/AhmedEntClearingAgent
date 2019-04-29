@@ -795,7 +795,7 @@ namespace WindowsFormsApp3
             row["vesselname"] = vesselnamebox.Text;
             row["forme"] = formebox.Text;
             row["invoiceno"] = invoicenobox.Text;
-            row["totalNumberInWords"] = ConvertToWords(totalamount.Text);
+            row["totalNumberInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(totalamount.Text)).ToString());
             row["file_invoice_no"] = file_invoiceBox.Text;
 
 

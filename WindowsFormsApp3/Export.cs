@@ -813,7 +813,7 @@ namespace WindowsFormsApp3
                 row["rate"] = listView1.Items[i].SubItems[3].Text == "" ? 0 : Convert.ToDouble(listView1.Items[i].SubItems[3].Text);
                 row["amount"] = listView1.Items[i].SubItems[4].Text == "" ? 0 : Convert.ToDouble(listView1.Items[i].SubItems[4].Text);
                 row["remarks"] = listView1.Items[i].SubItems[5].Text;
-                row["totalNumberInWords"] = ConvertToWords(totalamount.Text);
+                row["totalNumberInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(totalamount.Text)).ToString());
                 row["Sno"] = (i + 1);
                 row["companyaddress"] = Sqlite.address;
                 row["companytel_cel_email"] = "Tel# " + Sqlite.telno + " Cell# " + Sqlite.cellno + " ,Email: " + Sqlite.emailaddress;
@@ -1029,7 +1029,7 @@ namespace WindowsFormsApp3
             row["salestax"] = salesTax;
             double total = Convert.ToDouble(agencySalesCharges) + Convert.ToDouble(salesTax);
             row["total"] = total.ToString();
-            row["totalinwords"] = ConvertToWords(total.ToString());
+            row["totalinwords"] = ConvertToWords(Math.Abs(total).ToString());
 
             tempDataTable.Rows.Add(row);
 

@@ -853,7 +853,7 @@ namespace WindowsFormsApp3
                 row["amount"] = Convert.ToDouble(listView1.Items[i].SubItems[4].Text);
                 row["remarks"] = listView1.Items[i].SubItems[5].Text;
                 row["balance"] = Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text);
-                row["totalBalanceInWords"] = ConvertToWords((Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
+                row["totalBalanceInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
                 row["Sno"] = (i++ + 1);
 
                 row["advancepaymentname"] = listView2.Items[j].SubItems[0].Text;
@@ -881,7 +881,7 @@ namespace WindowsFormsApp3
                 row["amount"] = Convert.ToDouble(listView1.Items[i].SubItems[4].Text);
                 row["remarks"] = listView1.Items[i].SubItems[5].Text;
                 row["balance"] = Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text);
-                row["totalBalanceInWords"] = ConvertToWords((Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
+                row["totalBalanceInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
                 row["Sno"] = (i++ + 1);
                 row["companyaddress"] = Sqlite.address;
                 row["companytel_cell_email"] = "Tel# " + Sqlite.telno + " Cell# " + Sqlite.cellno + " ,Email: " + Sqlite.emailaddress;
@@ -897,7 +897,7 @@ namespace WindowsFormsApp3
                     row = tempDataTable.NewRow();
 
                 row["balance"] = Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text);
-                row["totalBalanceInWords"] = ConvertToWords((Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
+                row["totalBalanceInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(TotalAmountLabel.Text) - Convert.ToDouble(TotalAdvanceLabel.Text)).ToString());
 
                 row["advancepaymentname"] = listView2.Items[j].SubItems[0].Text; ;
                 row["received"] = Convert.ToDouble(listView2.Items[j].SubItems[2].Text);
@@ -1124,7 +1124,7 @@ namespace WindowsFormsApp3
             row["salestax"] = salesTax;
             double total = Convert.ToDouble(agencySalesCharges) + Convert.ToDouble(salesTax);
             row["total"] = total.ToString();
-            row["totalinwords"] = ConvertToWords(total.ToString());
+            row["totalinwords"] = ConvertToWords(Math.Abs(total).ToString());
 
             tempDataTable.Rows.Add(row);
 

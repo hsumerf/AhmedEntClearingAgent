@@ -128,5 +128,10 @@ namespace WindowsFormsApp3
 
             }
         }
+
+        private void nameBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

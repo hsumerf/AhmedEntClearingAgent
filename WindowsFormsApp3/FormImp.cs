@@ -73,6 +73,7 @@ namespace WindowsFormsApp3
                 ntnnobox.Text = sqliteDataReader["clientntn"].ToString();
                 strno.Text = sqliteDataReader["clientstr"].ToString();
             }
+            sqliteDataReader.Close();
 
 
             sqliteConnection.Close();
@@ -152,6 +153,7 @@ namespace WindowsFormsApp3
                                                               sqliteDataReader["amount"].ToString(),
                                                               sqliteDataReader["remarks"].ToString()  }));
             }
+            sqliteDataReader.Close();
             listCount = listView1.Items.Count;
             TotalAmount();
 
@@ -225,7 +227,7 @@ namespace WindowsFormsApp3
                         break;
                     }
                 }
-
+                sqliteDataReader.Close();
                 if (!error)
                 {
                     if (alreadyExistFileNo != filenobox.Text)
@@ -437,7 +439,7 @@ namespace WindowsFormsApp3
                 ntnnobox.Text = sqliteDataReader1["clientntn"].ToString();
                 strno.Text = sqliteDataReader1["clientstr"].ToString();
             }
-
+            sqliteDataReader.Close();
 
             sqliteConnection.Close();
 
@@ -752,7 +754,7 @@ namespace WindowsFormsApp3
                 ntnnobox.Text = sqliteDataReader["ntnnumber"].ToString();
                 strno.Text = sqliteDataReader["strnumber"].ToString(); ;
             }
-
+            sqliteDataReader.Close();
             con.Close();
             
         }

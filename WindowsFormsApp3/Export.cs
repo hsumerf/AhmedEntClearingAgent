@@ -74,6 +74,7 @@ namespace WindowsFormsApp3
                                                               sqliteDataReader["amount"].ToString(),
                                                               sqliteDataReader["remarks"].ToString()  }));
             }
+            sqliteDataReader.Close();
             listCount = listView1.Items.Count;
             sqliteConnection.Close();
             TotalAmount();
@@ -122,7 +123,7 @@ namespace WindowsFormsApp3
                 ntnnobox.Text = sqliteDataReader["clientntn"].ToString();
                 strnobox.Text = sqliteDataReader["clientstr"].ToString();
             }
-
+            sqliteDataReader.Close();
             sqliteConnection.Close();
 
             if (file_invoiceBox.Text == "")
@@ -159,6 +160,7 @@ namespace WindowsFormsApp3
 
 
             }
+            sqliteDataReader.Close();
             //listview
             sqliteCommand = new SQLiteCommand("select * from exportfileparticulars where fileno = '" + filenobox.Text + "'", sqliteConnection);
             sqliteDataReader = sqliteCommand.ExecuteReader();
@@ -170,6 +172,7 @@ namespace WindowsFormsApp3
                                                              sqliteDataReader["amount"].ToString(),
                                                              sqliteDataReader["remarks"].ToString()}));
             }
+            sqliteDataReader.Close();
             sqliteConnection.Close();
             TotalAmount();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class Pay
+    partial class Receivings
     {
         /// <summary>
         /// Required designer variable.
@@ -46,18 +46,21 @@
             // payer
             // 
             this.payer.FormattingEnabled = true;
-            this.payer.Location = new System.Drawing.Point(185, 79);
+            this.payer.Location = new System.Drawing.Point(247, 97);
+            this.payer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.payer.Name = "payer";
-            this.payer.Size = new System.Drawing.Size(185, 21);
+            this.payer.Size = new System.Drawing.Size(245, 24);
             this.payer.Sorted = true;
             this.payer.TabIndex = 1;
+            this.payer.SelectedIndexChanged += new System.EventHandler(this.payer_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 37);
+            this.label5.Location = new System.Drawing.Point(97, 46);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.Size = new System.Drawing.Size(38, 17);
             this.label5.TabIndex = 72;
             this.label5.Text = "Date";
             // 
@@ -65,17 +68,19 @@
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(185, 36);
+            this.dateTimePicker1.Location = new System.Drawing.Point(247, 44);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(245, 22);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2019, 4, 15, 0, 0, 0, 0);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(294, 293);
+            this.button3.Location = new System.Drawing.Point(392, 361);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 7;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
@@ -84,85 +89,95 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 221);
+            this.label1.Location = new System.Drawing.Point(97, 272);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 66;
             this.label1.Text = "Remarks";
             // 
             // remarks
             // 
-            this.remarks.Location = new System.Drawing.Point(184, 221);
+            this.remarks.Location = new System.Drawing.Point(245, 272);
+            this.remarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.remarks.Multiline = true;
             this.remarks.Name = "remarks";
-            this.remarks.Size = new System.Drawing.Size(185, 53);
+            this.remarks.Size = new System.Drawing.Size(245, 64);
             this.remarks.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 82);
+            this.label2.Location = new System.Drawing.Point(97, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 64;
             this.label2.Text = "Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 118);
+            this.label6.Location = new System.Drawing.Point(96, 145);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.Size = new System.Drawing.Size(56, 17);
             this.label6.TabIndex = 81;
             this.label6.Text = "File No.";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 155);
+            this.label4.Location = new System.Drawing.Point(95, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(136, 17);
             this.label4.TabIndex = 80;
             this.label4.Text = "Slip No./Cheque No.";
             // 
             // slipno
             // 
-            this.slipno.Location = new System.Drawing.Point(182, 153);
+            this.slipno.Location = new System.Drawing.Point(243, 188);
+            this.slipno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slipno.Name = "slipno";
-            this.slipno.Size = new System.Drawing.Size(185, 20);
+            this.slipno.Size = new System.Drawing.Size(245, 22);
             this.slipno.TabIndex = 3;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 189);
+            this.label7.Location = new System.Drawing.Point(96, 233);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.Size = new System.Drawing.Size(59, 17);
             this.label7.TabIndex = 82;
             this.label7.Text = "Receive";
             // 
             // receive
             // 
-            this.receive.Location = new System.Drawing.Point(182, 189);
+            this.receive.Location = new System.Drawing.Point(243, 233);
+            this.receive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.receive.Name = "receive";
-            this.receive.Size = new System.Drawing.Size(185, 20);
+            this.receive.Size = new System.Drawing.Size(245, 22);
             this.receive.TabIndex = 4;
             this.receive.Text = "0";
             // 
             // fileno
             // 
             this.fileno.FormattingEnabled = true;
-            this.fileno.Location = new System.Drawing.Point(185, 118);
+            this.fileno.Location = new System.Drawing.Point(247, 145);
+            this.fileno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fileno.Name = "fileno";
-            this.fileno.Size = new System.Drawing.Size(185, 21);
+            this.fileno.Size = new System.Drawing.Size(245, 24);
             this.fileno.Sorted = true;
             this.fileno.TabIndex = 83;
+            this.fileno.SelectedIndexChanged += new System.EventHandler(this.fileno_SelectedIndexChanged);
             // 
-            // Pay
+            // Receivings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 415);
+            this.ClientSize = new System.Drawing.Size(648, 511);
             this.Controls.Add(this.fileno);
             this.Controls.Add(this.receive);
             this.Controls.Add(this.label7);
@@ -176,8 +191,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.remarks);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Pay";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Receivings";
             this.Text = "Receivings";
             this.Load += new System.EventHandler(this.Pay_Load);
             this.ResumeLayout(false);

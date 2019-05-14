@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class ReceivedFiles : Form
+    public partial class ReceivedReports : Form
     {
-        public ReceivedFiles()
+        public ReceivedReports()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                Pay receivings = new Pay();
+                Receivings receivings = new Receivings();
                 receivings.dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[0].Text;
                 receivings.payer.Text = listView1.SelectedItems[0].SubItems[3].Text;
                 receivings.fileno.Text = listView1.SelectedItems[0].SubItems[1].Text;
@@ -59,7 +59,7 @@ namespace WindowsFormsApp3
             }
             else
             {
-                sq = new SQLiteCommand("select files.date,files.fileno,files.invoiceno,files.name,files.customerrefno,files.qtycontainer,files.invamount,pay.received as receive,pay.slipno,pay.remarks from files inner join pay on files.fileno = pay.fileno  where pay.payer = '" + nameBox.Text + "' and files.name = '" + nameBox.Text + "' and receiveformcheck = '1'", scn);
+                sq = new SQLiteCommand("select files.date,files.fileno,files.invoiceno,files.name,files.customerrefno,files.qtycontainer,files.invamount,pay.received as receive,pay.slipno,pay.remarks from files inner join pay on files.fileno = pay.fileno  where receiveformcheck = '1' and name='"+nameBox.Text+"' ", scn);
                 dr = sq.ExecuteReader();
                 // String tot ="10.5", rec = "5.5";
                 while (dr.Read())
@@ -106,27 +106,34 @@ namespace WindowsFormsApp3
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure to delete this entry?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
+            SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+            scn.Open();
+            SQLiteCommand sq;
             if (dialogResult == DialogResult.Yes)
             {
+                try
+                {
+                    sq = new SQLiteCommand("delete from pay where fileno = '" + listView1.SelectedItems[0].SubItems[1].Text + "' and payer = '" + listView1.SelectedItems[0].SubItems[3].Text + "' and receiveformcheck = '1'", scn);
+                    sq.ExecuteNonQuery();
+                    MessageBox.Show("Entry deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                
 
-                SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
-                scn.Open();
-                SQLiteCommand sq;
+             //   MessageBox.Show("Entry deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                sq = new SQLiteCommand("delete from pay where fileno = '" + listView1.SelectedItems[0].SubItems[1].ToString() + "' and payer = '" + listView1.SelectedItems[0].SubItems[3].ToString() + "' and receiveformcheck = '1'", scn);
-                sq.ExecuteNonQuery();
-
-                MessageBox.Show("Entry deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                scn.Close();
-
-                this.Close();
+              
             }
             else
             {
 
             }
+            scn.Close();
+
+            this.Close();
         }
 
         private void nameBox_SelectedIndexChanged(object sender, EventArgs e)

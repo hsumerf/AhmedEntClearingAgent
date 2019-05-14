@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp3
 {
-    partial class ReceivedFiles
+    partial class ReceivedReports
     {
         /// <summary>
         /// Required designer variable.
@@ -63,11 +63,11 @@
             this.columnHeader11});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(12, 91);
+            this.listView1.Location = new System.Drawing.Point(0, 91);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1347, 424);
+            this.listView1.Size = new System.Drawing.Size(1403, 424);
             this.listView1.TabIndex = 94;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -180,18 +180,18 @@
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // ReceivedFiles
+            // ReceivedReports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 585);
+            this.ClientSize = new System.Drawing.Size(1415, 585);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.filterBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nameBox);
-            this.Name = "ReceivedFiles";
+            this.Name = "ReceivedReports";
             this.Text = "Receiving Reports";
             this.Load += new System.EventHandler(this.ReceivedFiles_Load);
             this.ResumeLayout(false);

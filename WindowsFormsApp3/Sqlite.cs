@@ -44,6 +44,27 @@ namespace WindowsFormsApp3
             
         }
 
+        public static string[] LoadFiles(string file_name)
+        {
+            List<string> namelist = new List<string>();
+            SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
+            scn.Open();
+            SQLiteCommand sq;
+
+            sq = new SQLiteCommand("select fileno from files where name = '"+file_name+"'", scn);
+            SQLiteDataReader dr = sq.ExecuteReader();
+
+            while (dr.Read())
+            {
+
+                namelist.Add(dr["fileno"].ToString());
+            }
+
+            scn.Close();
+            return namelist.ToArray();
+
+        }
+
         public static string[] LoadImportFiles()
         {
             List<string> namelist = new List<string>();

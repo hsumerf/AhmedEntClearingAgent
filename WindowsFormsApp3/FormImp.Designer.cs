@@ -86,7 +86,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.indno = new System.Windows.Forms.TextBox();
             this.igmnodate = new System.Windows.Forms.TextBox();
-            this.invoiceno = new System.Windows.Forms.TextBox();
+            this.customer_ref_no = new System.Windows.Forms.TextBox();
             this.vesselname = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -142,7 +142,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(132, 23);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 34;
@@ -174,7 +174,7 @@
             // countryio
             // 
             this.countryio.Location = new System.Drawing.Point(152, 203);
-            this.countryio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.countryio.Margin = new System.Windows.Forms.Padding(4);
             this.countryio.Name = "countryio";
             this.countryio.Size = new System.Drawing.Size(171, 22);
             this.countryio.TabIndex = 15;
@@ -203,7 +203,7 @@
             // shippingco
             // 
             this.shippingco.Location = new System.Drawing.Point(459, 207);
-            this.shippingco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shippingco.Margin = new System.Windows.Forms.Padding(4);
             this.shippingco.Name = "shippingco";
             this.shippingco.Size = new System.Drawing.Size(147, 22);
             this.shippingco.TabIndex = 16;
@@ -247,7 +247,7 @@
             // 
             this.blawbnobox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.blawbnobox.Location = new System.Drawing.Point(153, 171);
-            this.blawbnobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.blawbnobox.Margin = new System.Windows.Forms.Padding(4);
             this.blawbnobox.Name = "blawbnobox";
             this.blawbnobox.Size = new System.Drawing.Size(169, 22);
             this.blawbnobox.TabIndex = 13;
@@ -256,7 +256,7 @@
             // 
             this.descriptionbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.descriptionbox.Location = new System.Drawing.Point(153, 139);
-            this.descriptionbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionbox.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionbox.Name = "descriptionbox";
             this.descriptionbox.Size = new System.Drawing.Size(169, 22);
             this.descriptionbox.TabIndex = 11;
@@ -284,7 +284,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(701, 544);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 31;
@@ -297,7 +297,7 @@
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(512, 92);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(147, 22);
             this.dateTimePicker1.TabIndex = 5;
@@ -306,7 +306,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(1248, 546);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 32;
@@ -338,9 +338,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(691, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(819, 90);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
@@ -360,7 +360,7 @@
             // 
             this.rateBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.rateBox.Location = new System.Drawing.Point(419, 41);
-            this.rateBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rateBox.Margin = new System.Windows.Forms.Padding(4);
             this.rateBox.Name = "rateBox";
             this.rateBox.Size = new System.Drawing.Size(77, 22);
             this.rateBox.TabIndex = 27;
@@ -399,7 +399,7 @@
             // remarksbox
             // 
             this.remarksbox.Location = new System.Drawing.Point(505, 42);
-            this.remarksbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.remarksbox.Margin = new System.Windows.Forms.Padding(4);
             this.remarksbox.Multiline = true;
             this.remarksbox.Name = "remarksbox";
             this.remarksbox.Size = new System.Drawing.Size(212, 22);
@@ -409,7 +409,7 @@
             // 
             this.quantityBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.quantityBox.Location = new System.Drawing.Point(345, 41);
-            this.quantityBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityBox.Margin = new System.Windows.Forms.Padding(4);
             this.quantityBox.Name = "quantityBox";
             this.quantityBox.Size = new System.Drawing.Size(67, 22);
             this.quantityBox.TabIndex = 26;
@@ -418,7 +418,7 @@
             // receiptnobox
             // 
             this.receiptnobox.Location = new System.Drawing.Point(257, 41);
-            this.receiptnobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.receiptnobox.Margin = new System.Windows.Forms.Padding(4);
             this.receiptnobox.Name = "receiptnobox";
             this.receiptnobox.Size = new System.Drawing.Size(79, 22);
             this.receiptnobox.TabIndex = 25;
@@ -436,7 +436,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(727, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(36, 28);
             this.button1.TabIndex = 29;
@@ -538,7 +538,7 @@
             // 
             this.ntnnobox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ntnnobox.Location = new System.Drawing.Point(499, 20);
-            this.ntnnobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ntnnobox.Margin = new System.Windows.Forms.Padding(4);
             this.ntnnobox.Name = "ntnnobox";
             this.ntnnobox.Size = new System.Drawing.Size(147, 22);
             this.ntnnobox.TabIndex = 2;
@@ -556,7 +556,7 @@
             // lcno
             // 
             this.lcno.Location = new System.Drawing.Point(459, 78);
-            this.lcno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lcno.Margin = new System.Windows.Forms.Padding(4);
             this.lcno.Name = "lcno";
             this.lcno.Size = new System.Drawing.Size(147, 22);
             this.lcno.TabIndex = 8;
@@ -564,7 +564,7 @@
             // gdnodate
             // 
             this.gdnodate.Location = new System.Drawing.Point(459, 37);
-            this.gdnodate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gdnodate.Margin = new System.Windows.Forms.Padding(4);
             this.gdnodate.Name = "gdnodate";
             this.gdnodate.Size = new System.Drawing.Size(147, 22);
             this.gdnodate.TabIndex = 6;
@@ -572,7 +572,7 @@
             // ms
             // 
             this.ms.Location = new System.Drawing.Point(153, 106);
-            this.ms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ms.Margin = new System.Windows.Forms.Padding(4);
             this.ms.Name = "ms";
             this.ms.Size = new System.Drawing.Size(169, 22);
             this.ms.TabIndex = 9;
@@ -594,9 +594,9 @@
             this.label18.Location = new System.Drawing.Point(21, 58);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 17);
+            this.label18.Size = new System.Drawing.Size(136, 17);
             this.label18.TabIndex = 88;
-            this.label18.Text = "Invoice No.";
+            this.label18.Text = "Cus. Ref/Invoice No.";
             // 
             // label19
             // 
@@ -652,7 +652,7 @@
             // indno
             // 
             this.indno.Location = new System.Drawing.Point(459, 174);
-            this.indno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.indno.Margin = new System.Windows.Forms.Padding(4);
             this.indno.Name = "indno";
             this.indno.Size = new System.Drawing.Size(147, 22);
             this.indno.TabIndex = 14;
@@ -660,23 +660,23 @@
             // igmnodate
             // 
             this.igmnodate.Location = new System.Drawing.Point(459, 142);
-            this.igmnodate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.igmnodate.Margin = new System.Windows.Forms.Padding(4);
             this.igmnodate.Name = "igmnodate";
             this.igmnodate.Size = new System.Drawing.Size(147, 22);
             this.igmnodate.TabIndex = 12;
             // 
-            // invoiceno
+            // customer_ref_no
             // 
-            this.invoiceno.Location = new System.Drawing.Point(155, 54);
-            this.invoiceno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.invoiceno.Name = "invoiceno";
-            this.invoiceno.Size = new System.Drawing.Size(172, 22);
-            this.invoiceno.TabIndex = 3;
+            this.customer_ref_no.Location = new System.Drawing.Point(155, 54);
+            this.customer_ref_no.Margin = new System.Windows.Forms.Padding(4);
+            this.customer_ref_no.Name = "customer_ref_no";
+            this.customer_ref_no.Size = new System.Drawing.Size(172, 22);
+            this.customer_ref_no.TabIndex = 3;
             // 
             // vesselname
             // 
             this.vesselname.Location = new System.Drawing.Point(459, 110);
-            this.vesselname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.vesselname.Margin = new System.Windows.Forms.Padding(4);
             this.vesselname.Name = "vesselname";
             this.vesselname.Size = new System.Drawing.Size(147, 22);
             this.vesselname.TabIndex = 10;
@@ -777,9 +777,9 @@
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Location = new System.Drawing.Point(4, 396);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(691, 78);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
@@ -799,7 +799,7 @@
             // 
             this.advanceAmountBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.advanceAmountBox.Location = new System.Drawing.Point(384, 48);
-            this.advanceAmountBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.advanceAmountBox.Margin = new System.Windows.Forms.Padding(4);
             this.advanceAmountBox.Name = "advanceAmountBox";
             this.advanceAmountBox.Size = new System.Drawing.Size(77, 22);
             this.advanceAmountBox.TabIndex = 20;
@@ -834,7 +834,7 @@
             // 
             this.advancereceipt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.advancereceipt.Location = new System.Drawing.Point(276, 48);
-            this.advancereceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.advancereceipt.Margin = new System.Windows.Forms.Padding(4);
             this.advancereceipt.Name = "advancereceipt";
             this.advancereceipt.Size = new System.Drawing.Size(99, 22);
             this.advancereceipt.TabIndex = 18;
@@ -852,7 +852,7 @@
             // advanceremarksbox
             // 
             this.advanceremarksbox.Location = new System.Drawing.Point(471, 47);
-            this.advanceremarksbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.advanceremarksbox.Margin = new System.Windows.Forms.Padding(4);
             this.advanceremarksbox.Multiline = true;
             this.advanceremarksbox.Name = "advanceremarksbox";
             this.advanceremarksbox.Size = new System.Drawing.Size(171, 25);
@@ -861,7 +861,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(651, 47);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(31, 28);
             this.button5.TabIndex = 21;
@@ -953,7 +953,7 @@
             // containerno
             // 
             this.containerno.Location = new System.Drawing.Point(152, 239);
-            this.containerno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.containerno.Margin = new System.Windows.Forms.Padding(4);
             this.containerno.Name = "containerno";
             this.containerno.Size = new System.Drawing.Size(171, 22);
             this.containerno.TabIndex = 111;
@@ -962,7 +962,7 @@
             // 
             this.file_invoiceBox.Enabled = false;
             this.file_invoiceBox.Location = new System.Drawing.Point(239, 73);
-            this.file_invoiceBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.file_invoiceBox.Margin = new System.Windows.Forms.Padding(4);
             this.file_invoiceBox.Name = "file_invoiceBox";
             this.file_invoiceBox.Size = new System.Drawing.Size(84, 22);
             this.file_invoiceBox.TabIndex = 110;
@@ -970,7 +970,7 @@
             // generateInvoice
             // 
             this.generateInvoice.Location = new System.Drawing.Point(153, 70);
-            this.generateInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.generateInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.generateInvoice.Name = "generateInvoice";
             this.generateInvoice.Size = new System.Drawing.Size(77, 28);
             this.generateInvoice.TabIndex = 7;
@@ -1025,7 +1025,7 @@
             // 
             this.strno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.strno.Location = new System.Drawing.Point(499, 52);
-            this.strno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.strno.Margin = new System.Windows.Forms.Padding(4);
             this.strno.Name = "strno";
             this.strno.Size = new System.Drawing.Size(147, 22);
             this.strno.TabIndex = 4;
@@ -1038,12 +1038,12 @@
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.strno);
-            this.groupBox4.Controls.Add(this.invoiceno);
+            this.groupBox4.Controls.Add(this.customer_ref_no);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Location = new System.Drawing.Point(13, 4);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(668, 84);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -1052,7 +1052,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(8, 23);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(107, 28);
             this.button6.TabIndex = 33;
@@ -1065,9 +1065,9 @@
             this.groupBox5.Controls.Add(this.button6);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Location = new System.Drawing.Point(693, 572);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(237, 62);
             this.groupBox5.TabIndex = 108;
             this.groupBox5.TabStop = false;
@@ -1078,9 +1078,9 @@
             this.groupBox6.Controls.Add(this.Sales_Tax_Preview);
             this.groupBox6.Controls.Add(this.Sales_Tax_Print);
             this.groupBox6.Location = new System.Drawing.Point(977, 572);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(237, 62);
             this.groupBox6.TabIndex = 109;
             this.groupBox6.TabStop = false;
@@ -1089,7 +1089,7 @@
             // Sales_Tax_Preview
             // 
             this.Sales_Tax_Preview.Location = new System.Drawing.Point(8, 23);
-            this.Sales_Tax_Preview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sales_Tax_Preview.Margin = new System.Windows.Forms.Padding(4);
             this.Sales_Tax_Preview.Name = "Sales_Tax_Preview";
             this.Sales_Tax_Preview.Size = new System.Drawing.Size(107, 28);
             this.Sales_Tax_Preview.TabIndex = 35;
@@ -1100,7 +1100,7 @@
             // Sales_Tax_Print
             // 
             this.Sales_Tax_Print.Location = new System.Drawing.Point(137, 23);
-            this.Sales_Tax_Print.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sales_Tax_Print.Margin = new System.Windows.Forms.Padding(4);
             this.Sales_Tax_Print.Name = "Sales_Tax_Print";
             this.Sales_Tax_Print.Size = new System.Drawing.Size(100, 28);
             this.Sales_Tax_Print.TabIndex = 36;
@@ -1111,7 +1111,7 @@
             // AdvanceRemove
             // 
             this.AdvanceRemove.Location = new System.Drawing.Point(581, 645);
-            this.AdvanceRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdvanceRemove.Margin = new System.Windows.Forms.Padding(4);
             this.AdvanceRemove.Name = "AdvanceRemove";
             this.AdvanceRemove.Size = new System.Drawing.Size(100, 28);
             this.AdvanceRemove.TabIndex = 23;
@@ -1122,7 +1122,7 @@
             // updateBtn
             // 
             this.updateBtn.Location = new System.Drawing.Point(1247, 582);
-            this.updateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(4);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(100, 28);
             this.updateBtn.TabIndex = 110;
@@ -1156,7 +1156,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1861, 949);
             this.Name = "FormImport";
-            this.Text = "1";
+            this.Text = "IMPORT";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1227,7 +1227,7 @@
         private System.Windows.Forms.Label label23;
         public System.Windows.Forms.TextBox indno;
         public System.Windows.Forms.TextBox igmnodate;
-        public System.Windows.Forms.TextBox invoiceno;
+        public System.Windows.Forms.TextBox customer_ref_no;
         public System.Windows.Forms.TextBox vesselname;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader17;

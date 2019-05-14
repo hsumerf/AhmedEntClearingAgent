@@ -28,7 +28,7 @@ namespace WindowsFormsApp3
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Pay pay = new Pay();
+            Receivings pay = new Receivings();
             pay.Show();
         }
 
@@ -177,8 +177,13 @@ namespace WindowsFormsApp3
 
         private void recFilesBtn_Click(object sender, EventArgs e)
         {
-            ReceivedFiles receivedFiles = new ReceivedFiles();
+            ReceivedReports receivedFiles = new ReceivedReports();
             receivedFiles.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

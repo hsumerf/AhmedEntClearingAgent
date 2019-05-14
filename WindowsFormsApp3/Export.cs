@@ -118,7 +118,7 @@ namespace WindowsFormsApp3
                 portofdischargebox.Text = sqliteDataReader["portofdischarge"].ToString();
                 vesselnamebox.Text = sqliteDataReader["vesselname"].ToString();
                 formebox.Text = sqliteDataReader["forme"].ToString();
-                invoicenobox.Text = sqliteDataReader["invoiceno"].ToString();
+                customer_ref_no.Text = sqliteDataReader["invoiceno"].ToString();
                 ntnnobox.Text = sqliteDataReader["clientntn"].ToString();
                 strnobox.Text = sqliteDataReader["clientstr"].ToString();
             }
@@ -155,7 +155,7 @@ namespace WindowsFormsApp3
                 portofdischargebox.Text = sqliteDataReader["portofdischarge"].ToString();
                 vesselnamebox.Text = sqliteDataReader["vesselname"].ToString();
                 formebox.Text = sqliteDataReader["forme"].ToString();
-                invoicenobox.Text = sqliteDataReader["invoiceno"].ToString();
+                customer_ref_no.Text = sqliteDataReader["invoiceno"].ToString();
 
 
             }
@@ -290,26 +290,7 @@ namespace WindowsFormsApp3
                     }
                 }
 
-                //for (int i = 0; i < listView1.Items.Count; i++)
-                //{
-                //    trucks += listView1.Items[i].Text;
-                //}
-
-                //sq = new SQLiteCommand("delete from pay where fileno = '" + filenobox.Text + "' and payer = '" + namebox.Text + "' and amountcheck='-' ", sqliteConnection);
-                //sq.ExecuteNonQuery();
-                //sq = new SQLiteCommand("delete from files where fileno = '" + filenobox.Text + "' and name = '" + namebox.Text + "' ", sqliteConnection);
-                //sq.ExecuteNonQuery();
-                //FILE DETAILS INSERTION
-                //bool no_file = true;
-                //for (int i = 0; i < filenobox.Items.Count; i++)
-                //{
-                //    String value = filenobox.GetItemText(filenobox.Items[i]);
-                //    if (Convert.ToInt32(value) == Convert.ToInt32(filenobox.Text))
-                //    { no_file = false; }
-                //    //MessageBox.Show(value);
-
-                //}
-                //MessageBox.Show(no_file.ToString());
+              
 
                 if (alreadyExistFileNo != filenobox.Text)
                 {
@@ -318,7 +299,7 @@ namespace WindowsFormsApp3
                         namebox.Text,
                         dateTimePicker1.Text,
                         file_invoiceBox.Text,
-                        invoicenobox.Text,
+                        customer_ref_no.Text,
                         qtyofcontainerbox.Text,
                         totalamount.Text), sqliteConnection);
                     sqliteCommand.ExecuteNonQuery();
@@ -332,12 +313,7 @@ namespace WindowsFormsApp3
                         sqliteCommand.ExecuteNonQuery();
 
                     }
-                    //sq = new SQLiteCommand(String.Format("insert into files  (fileno,name,ntnno,date) values ('{0}','{1}','{2}','{3}')",
-                    //      filenobox.Text,
-                    //      namebox.Text,
-                    //      ntnnobox.Text,
-                    //      dateTimePicker1.Text), sqliteConnection);
-                    //sq.ExecuteNonQuery();
+                   
                     sqliteCommand = new SQLiteCommand(String.Format("insert into exportfiledetails  (fileno,name,ntnno,strno,date,ms,description,qty,portofloading,qtyofcontainer,containerno,sbillno,consigneename,shippingcompany,portofdischarge,vesselname,forme,invoiceno,file_invoice_no, clientntn, clientstr) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}')",
                           filenobox.Text,
                           namebox.Text,
@@ -356,7 +332,7 @@ namespace WindowsFormsApp3
                           portofdischargebox.Text,
                           vesselnamebox.Text,
                           formebox.Text,
-                          invoicenobox.Text,
+                          customer_ref_no.Text,
                           file_invoiceBox.Text,
                           ntnnobox.Text,
                           strnobox.Text), sqliteConnection);
@@ -426,7 +402,7 @@ namespace WindowsFormsApp3
                 portofdischargebox.Text = sqliteDataReader["portofdischarge"].ToString();
                 vesselnamebox.Text = sqliteDataReader["vesselname"].ToString();
                 formebox.Text = sqliteDataReader["forme"].ToString();
-                invoicenobox.Text = sqliteDataReader["invoiceno"].ToString();
+                customer_ref_no.Text = sqliteDataReader["invoiceno"].ToString();
                 ntnnobox.Text = sqliteDataReader["clientntn"].ToString();
                 strnobox.Text = sqliteDataReader["clientstr"].ToString();
             }
@@ -794,7 +770,7 @@ namespace WindowsFormsApp3
             row["portofdischarge"] = portofdischargebox.Text;
             row["vesselname"] = vesselnamebox.Text;
             row["forme"] = formebox.Text;
-            row["invoiceno"] = invoicenobox.Text;
+            row["invoiceno"] = customer_ref_no.Text;
             row["totalNumberInWords"] = ConvertToWords(Math.Abs(Convert.ToDouble(totalamount.Text)).ToString());
             row["file_invoice_no"] = file_invoiceBox.Text;
 
@@ -879,7 +855,7 @@ namespace WindowsFormsApp3
                     portofdischargebox.Text = "";
                     vesselnamebox.Text = "";
                     formebox.Text = "";
-                    invoicenobox.Text = "";
+                    customer_ref_no.Text = "";
                     particularsbox.Text = "";
                     receiptnobox.Text = "";
                     quantityBox.Text = "1";
@@ -913,7 +889,7 @@ namespace WindowsFormsApp3
                 portofdischargebox.Text = "";
                 vesselnamebox.Text = "";
                 formebox.Text = "";
-                invoicenobox.Text = "";
+                customer_ref_no.Text = "";
                 particularsbox.Text = "";
                 receiptnobox.Text = "";
                 quantityBox.Text = "1";
@@ -1091,7 +1067,7 @@ namespace WindowsFormsApp3
                         namebox.Text,
                         dateTimePicker1.Text,
                         file_invoiceBox.Text,
-                        invoicenobox.Text,
+                        customer_ref_no.Text,
                         qtyofcontainerbox.Text,
                         totalamount.Text), sqliteConnection);
                     sqliteCommand.ExecuteNonQuery();
@@ -1133,7 +1109,7 @@ namespace WindowsFormsApp3
                           portofdischargebox.Text,
                           vesselnamebox.Text,
                           formebox.Text,
-                          invoicenobox.Text,
+                          customer_ref_no.Text,
                           file_invoiceBox.Text,
                           ntnnobox.Text,
                           strnobox.Text), sqliteConnection);

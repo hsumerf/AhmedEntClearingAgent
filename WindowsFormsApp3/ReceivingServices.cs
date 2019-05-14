@@ -48,9 +48,9 @@ namespace WindowsFormsApp3
             
 
             sq.ExecuteNonQuery();
-
+            
             MessageBox.Show("Data Saved successfully");
-            Close();
+            scn.Close();
         }
 
         private void ReceivingServices_Load(object sender, EventArgs e)

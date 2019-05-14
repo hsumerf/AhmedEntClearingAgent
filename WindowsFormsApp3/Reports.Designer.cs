@@ -43,6 +43,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,7 +55,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // total_Rec
@@ -214,9 +214,14 @@
             this.columnHeader10.Text = "File No./Job No.";
             this.columnHeader10.Width = 128;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Slip No/Cheque No";
+            this.columnHeader5.Width = 123;
+            // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Slip No/Cheque No";
+            this.columnHeader1.Text = "Title";
             this.columnHeader1.Width = 142;
             // 
             // columnHeader3
@@ -312,11 +317,6 @@
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Title";
-            this.columnHeader5.Width = 123;
             // 
             // Reports
             // 

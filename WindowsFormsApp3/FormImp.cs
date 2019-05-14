@@ -66,7 +66,7 @@ namespace WindowsFormsApp3
                 gdnodate.Text = sqliteDataReader["gdnodate"].ToString();
                 lcno.Text = sqliteDataReader["lcno"].ToString();
                 vesselname.Text = sqliteDataReader["vesselname"].ToString();
-                invoiceno.Text = sqliteDataReader["invoiceno"].ToString();
+                customer_ref_no.Text = sqliteDataReader["invoiceno"].ToString();
                 igmnodate.Text = sqliteDataReader["igmnodate"].ToString();
                 indno.Text = sqliteDataReader["indno"].ToString();
                 file_invoiceBox.Text = sqliteDataReader["file_invoice_no"].ToString();
@@ -236,7 +236,7 @@ namespace WindowsFormsApp3
                             namebox.Text,
                             dateTimePicker1.Text,
                             file_invoiceBox.Text,
-                            invoiceno.Text,
+                            customer_ref_no.Text,
                             TotalAmountLabel.Text), sqliteConnection);
                         sqliteCommand.ExecuteNonQuery();
 
@@ -262,7 +262,7 @@ namespace WindowsFormsApp3
                                 gdnodate.Text,
                                 lcno.Text,
                                 vesselname.Text,
-                                invoiceno.Text,
+                                customer_ref_no.Text,
                                 igmnodate.Text,
                                 indno.Text,
                                 file_invoiceBox.Text,
@@ -430,7 +430,7 @@ namespace WindowsFormsApp3
                 gdnodate.Text = sqliteDataReader1["gdnodate"].ToString();
                 lcno.Text = sqliteDataReader1["lcno"].ToString();
                 vesselname.Text = sqliteDataReader1["vesselname"].ToString();
-                invoiceno.Text = sqliteDataReader1["invoiceno"].ToString();
+                customer_ref_no.Text = sqliteDataReader1["invoiceno"].ToString();
                 igmnodate.Text = sqliteDataReader1["igmnodate"].ToString();
                 indno.Text = sqliteDataReader1["indno"].ToString();
                 file_invoiceBox.Text = sqliteDataReader1["file_invoice_no"].ToString();
@@ -825,7 +825,7 @@ namespace WindowsFormsApp3
             row["gdnodate"] = gdnodate.Text;
             row["lcno"] = lcno.Text;
             row["vesselname"] = vesselname.Text;
-            row["invoiceno"] = invoiceno.Text;
+            row["invoiceno"] = customer_ref_no.Text;
             row["igmnodate"] = igmnodate.Text;
             row["indno"] = indno.Text;
             row["pay_totalNumberInWords"] = "";
@@ -978,7 +978,7 @@ namespace WindowsFormsApp3
                     vesselname.Text = "";
                     igmnodate.Text = "";
                     indno.Text = "";
-                    invoiceno.Text = "";
+                    customer_ref_no.Text = "";
                     particularsbox.Text = "";
                     receiptnobox.Text = "";
                     quantityBox.Text = "1";
@@ -1017,7 +1017,7 @@ namespace WindowsFormsApp3
                 vesselname.Text = "";
                 igmnodate.Text = "";
                 indno.Text = "";
-                invoiceno.Text = "";
+                customer_ref_no.Text = "";
                 particularsbox.Text = "";
                 receiptnobox.Text = "";
                 quantityBox.Text = "1";
@@ -1242,7 +1242,7 @@ namespace WindowsFormsApp3
                         namebox.Text,
                         dateTimePicker1.Text,
                         file_invoiceBox.Text,
-                        invoiceno.Text,
+                        customer_ref_no.Text,
                         TotalAmountLabel.Text), sqliteConnection);
                     sqliteCommand.ExecuteNonQuery();
 
@@ -1265,7 +1265,7 @@ namespace WindowsFormsApp3
                             gdnodate.Text,
                             lcno.Text,
                             vesselname.Text,
-                            invoiceno.Text,
+                            customer_ref_no.Text,
                             igmnodate.Text,
                             indno.Text,
                             file_invoiceBox.Text,

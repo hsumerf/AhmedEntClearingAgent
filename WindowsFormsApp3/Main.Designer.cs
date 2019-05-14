@@ -35,7 +35,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.NewAccount = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.recFilesBtn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -92,7 +92,7 @@
             // button3
             // 
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(584, 156);
+            this.button3.Location = new System.Drawing.Point(426, 156);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 92);
@@ -114,10 +114,10 @@
             // button5
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(999, 156);
+            this.button5.Location = new System.Drawing.Point(951, 137);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 92);
+            this.button5.Size = new System.Drawing.Size(99, 111);
             this.button5.TabIndex = 5;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -133,18 +133,6 @@
             this.NewAccount.UseVisualStyleBackColor = true;
             this.NewAccount.Click += new System.EventHandler(this.NewAccount_Click);
             // 
-            // button7
-            // 
-            this.button7.Enabled = false;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(407, 161);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(99, 92);
-            this.button7.TabIndex = 3;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button8
             // 
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
@@ -159,7 +147,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(995, 251);
+            this.label1.Location = new System.Drawing.Point(925, 272);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 17);
             this.label1.TabIndex = 9;
@@ -198,7 +186,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(580, 251);
+            this.label8.Location = new System.Drawing.Point(422, 251);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 17);
             this.label8.TabIndex = 17;
@@ -310,11 +298,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(403, 256);
+            this.label7.Location = new System.Drawing.Point(1014, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 17);
             this.label7.TabIndex = 16;
             this.label7.Text = "Files Report";
+            this.label7.Visible = false;
             // 
             // label6
             // 
@@ -346,6 +335,7 @@
             this.groupBox3.TabIndex = 32;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Backup/Restore";
+            this.groupBox3.Visible = false;
             // 
             // groupBox4
             // 
@@ -385,7 +375,7 @@
             // 
             this.groupBox5.Controls.Add(this.button10);
             this.groupBox5.Controls.Add(this.recFilesBtn);
-            this.groupBox5.Location = new System.Drawing.Point(780, 154);
+            this.groupBox5.Location = new System.Drawing.Point(622, 154);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
@@ -393,6 +383,19 @@
             this.groupBox5.TabIndex = 32;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Registers";
+            // 
+            // button7
+            // 
+            this.button7.Enabled = false;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(1018, 11);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(99, 92);
+            this.button7.TabIndex = 3;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Main
             // 
@@ -423,6 +426,7 @@
             this.Name = "Main";
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -441,7 +445,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button NewAccount;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -466,5 +469,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button recFilesBtn;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button7;
     }
 }

@@ -89,75 +89,13 @@ namespace WindowsFormsApp3
 
         private void AccountRegester_Load(object sender, EventArgs e)
         {
-            nameBox.Items.AddRange(Sqlite.LoadClients());
-        }
+            //nameBox.Items.AddRange(Sqlite.LoadClients());
 
-        private void mainComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SQLiteConnection sqliteConnection = new SQLiteConnection(@"data source = main.db");
-            SQLiteCommand sqliteCommand;
-            SQLiteDataReader sqliteDataReader;
+            subComboBox.Items.Clear();
+            subComboBox.Text = "";
 
-            if (mainComboBox.Text == "Customer Ref No")
-            {
-                subComboBox.Items.Clear();
-                subComboBox.Text = "";
-
-                sqliteConnection.Open();
-
-                sqliteCommand = new SQLiteCommand("select customerrefno from pay", sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-
-                while (sqliteDataReader.Read())
-                    subComboBox.Items.Add(sqliteDataReader["customerrefno"]);
-
-                deleteEmptySpacesFromComboBox();
-
-                sqliteConnection.Close();
-
-
-            }
-
-            else if (mainComboBox.Text == "File No")
-            {
-                subComboBox.Items.Clear();
-                subComboBox.Text = "";
-
-                //sqliteConnection.Open();
-
-                //sqliteCommand = new SQLiteCommand("select fileno from pay", sqliteConnection);
-                //sqliteDataReader = sqliteCommand.ExecuteReader();
-
-                //while (sqliteDataReader.Read())
-                //    subComboBox.Items.Add(sqliteDataReader["fileno"]);
-
-                //deleteEmptySpacesFromComboBox();
-
-                subComboBox.Items.AddRange(Sqlite.LoadFiles());
-
-                sqliteConnection.Close();
-            }
-
-            else if (mainComboBox.Text == "Client Name")
-            {
-                subComboBox.Items.Clear();
-                subComboBox.Text = "";
-
-                //sqliteConnection.Open();
-
-                //sqliteCommand = new SQLiteCommand("select payer from pay", sqliteConnection);
-                //sqliteDataReader = sqliteCommand.ExecuteReader();
-
-                //while (sqliteDataReader.Read())
-                //    subComboBox.Items.Add(sqliteDataReader["payer"]);
-
-                //deleteEmptySpacesFromComboBox();
-
-                subComboBox.Items.AddRange(Sqlite.LoadClients());
-
-                sqliteConnection.Close();
-            }
-        }
+            subComboBox.Items.AddRange(Sqlite.LoadClients());
+        }        
 
         private void deleteEmptySpacesFromComboBox()
         {
@@ -174,111 +112,56 @@ namespace WindowsFormsApp3
         {
             SQLiteConnection sqliteConnection = new SQLiteConnection(@"data source = main.db");
             SQLiteCommand sqliteCommand;
-            SQLiteDataReader sqliteDataReader;
-
-            if (mainComboBox.Text == "Customer Ref No")
-            {
-                sqliteConnection.Open();
-
-                sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, pay.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno, pay.remarks  from pay inner join files on pay.fileno = pay.fileno where pay.customerrefno = '" + subComboBox.Text + "' group by pay.customerrefno", sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-
-                listView1.Items.Clear();
-
-                while (sqliteDataReader.Read())
-                {
-                    listView1.Items.Add(new ListViewItem(new string[] { sqliteDataReader["date"].ToString(),
-                        sqliteDataReader["fileno"].ToString(),
-                        sqliteDataReader["invoiceno"].ToString(),
-                        sqliteDataReader["payer"].ToString(),
-                        sqliteDataReader["customerrefno"].ToString(),
-                        sqliteDataReader["qtycontainer"].ToString(),
-                        sqliteDataReader["invamount"].ToString(),
-                        sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
-                        sqliteDataReader["chequeno"].ToString(),
-                        sqliteDataReader["remarks"].ToString()}));
-                }
-
-
-                sqliteConnection.Close();
-            }
-
-            else if (mainComboBox.Text == "File No")
-            {
-                sqliteConnection.Open();
-
-                sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, pay.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno, pay.remarks  from pay inner join files on pay.fileno = pay.fileno where pay.fileno = '" + subComboBox.Text + "' group by pay.fileno", sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
-
-                listView1.Items.Clear();
-
-                while (sqliteDataReader.Read())
-                {
-
-                    listView1.Items.Add(new ListViewItem(new string[] { sqliteDataReader["date"].ToString(),
-                        sqliteDataReader["fileno"].ToString(),
-                        sqliteDataReader["invoiceno"].ToString(),
-                        sqliteDataReader["payer"].ToString(),
-                        sqliteDataReader["customerrefno"].ToString(),
-                        sqliteDataReader["qtycontainer"].ToString(),
-                        sqliteDataReader["invamount"].ToString(),
-                        sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
-                        sqliteDataReader["chequeno"].ToString(),
-                        sqliteDataReader["remarks"].ToString()}));
-
-                }
-
-
-                sqliteConnection.Close();
-            }
-
-            else if (mainComboBox.Text == "Client Name")
-            {
+            
                 string[] report = new string[subComboBox.Items.Count];
 
                 sqliteConnection.Open();
+                
 
-                sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, pay.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno, pay.remarks  from pay inner join files on files.fileno = pay.fileno where pay.payer = '" + subComboBox.Text + "' group by pay.fileno", sqliteConnection);
-                sqliteDataReader = sqliteCommand.ExecuteReader();
+                sqliteCommand = new SQLiteCommand("select pay.date, pay.fileno, files.invoiceno as invoiceno, pay.payer, files.customerrefno, files.qtycontainer as qtycontainer, files.invamount as invamount, sum(pay.received) as receive, pay.chequeno  from pay inner join files on files.fileno = pay.fileno where pay.payer = '" + subComboBox.Text + "' group by pay.fileno", sqliteConnection);
+                SQLiteDataReader reader = sqliteCommand.ExecuteReader();
 
 
                 listView1.Items.Clear();
 
-                SQLiteCommand comm = new SQLiteCommand("select chequeno from pay inner join files on files.fileno = pay.fileno where payer = '" + subComboBox.Text + "' and files.fileno = pay.fileno and receiveformcheck = '1'", sqliteConnection);
-                SQLiteDataReader dr = comm.ExecuteReader();
-
-                while (sqliteDataReader.Read())
+                //SQLiteCommand comm = new SQLiteCommand("select slipno, remarks from pay inner join files on files.fileno = pay.fileno where payer = '" + subComboBox.Text + "' and files.fileno = pay.fileno and receiveformcheck = '1'", sqliteConnection);
+                //SQLiteDataReader dr = comm.ExecuteReader();
+                while (reader.Read())
                 {
-                    string tempStr = "";
+                    string tempStrForSlipno = "";
+                    string tempStrForRemarks = "";
+                string file_no = reader["fileno"].ToString();
 
-                    while (dr.Read())
+
+                    SQLiteCommand comm = new SQLiteCommand("select slipno, remarks from pay inner join files on files.fileno = pay.fileno where payer = '" + subComboBox.Text + "' and files.fileno = '"+ file_no +"' and receiveformcheck = '1'", sqliteConnection);
+                    SQLiteDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
                     {
-                        tempStr = dr["chequeno"].ToString();
-                        if (tempStr != "")
+                        tempStrForSlipno = dr["slipno"].ToString();
+                        tempStrForRemarks = dr["remarks"].ToString();
+                        if (tempStrForSlipno != "")
                         {
                             break;
                         }
                     }
 
-                    listView1.Items.Add(new ListViewItem(new string[] { sqliteDataReader["date"].ToString(),
-                        sqliteDataReader["fileno"].ToString(),
-                        sqliteDataReader["invoiceno"].ToString(),
-                        sqliteDataReader["payer"].ToString(),
-                        sqliteDataReader["customerrefno"].ToString(),
-                        sqliteDataReader["qtycontainer"].ToString(),
-                        sqliteDataReader["invamount"].ToString(),
-                        sqliteDataReader["receive"].ToString(),
-                        Convert.ToString(Convert.ToInt32(sqliteDataReader["invamount"]) - Convert.ToInt32(sqliteDataReader["receive"])),
+                    listView1.Items.Add(new ListViewItem(new string[] { reader["date"].ToString(),
+                        file_no,
+                        reader["invoiceno"].ToString(),
+                        reader["payer"].ToString(),
+                        reader["customerrefno"].ToString(),
+                        reader["qtycontainer"].ToString(),
+                        reader["invamount"].ToString(),
+                        reader["receive"].ToString(),
+                        Convert.ToString(Convert.ToInt32(reader["invamount"]) - Convert.ToInt32(reader["receive"])),
                         //sqliteDataReader["chequeno"].ToString(),
-                        tempStr,
-                        sqliteDataReader["remarks"].ToString()}));
+                        tempStrForSlipno,
+                        tempStrForRemarks}));
                 }
                 sqliteConnection.Close();
             }
 
-        }
+        
 
         private void listView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {

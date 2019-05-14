@@ -11,18 +11,25 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Pay : Form
+    public partial class Receivings : Form
     {
-        public Pay()
+        public Receivings()
         {
             InitializeComponent();
         }
+        string tempFileNo;
+        string tempPayer;
 
         public bool isUpdate = false;
         private void Pay_Load(object sender, EventArgs e)
         {
+
+
+             tempFileNo = fileno.Text;
+             tempPayer = payer.Text;
+
             payer.Items.AddRange(Sqlite.LoadClients());
-            fileno.Items.AddRange(Sqlite.LoadFiles());
+            fileno.Items.AddRange(Sqlite.LoadFiles(payer.Text));
 
             //SQLiteConnection scn = new SQLiteConnection(@"data source = main.db");
             //scn.Open();
@@ -35,12 +42,13 @@ namespace WindowsFormsApp3
             //    receive.Text = dr["received"].ToString();
             //    remarks.Text = dr["remarks"].ToString();
             //}
-            
+
             //scn.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             if (payer.Text == "")
             {
                 MessageBox.Show("Payer can not be empty");
@@ -63,10 +71,12 @@ namespace WindowsFormsApp3
                        remarks.Text,
                        "1"), scn);
 
+                    
                     sq.ExecuteNonQuery();
 
                     MessageBox.Show("Data Saved successfully");
-                    Close();
+                    scn.Close();
+                    this.Close();
                 }
                 else if (isUpdate)
                 {
@@ -74,7 +84,7 @@ namespace WindowsFormsApp3
                     scn.Open();
                     SQLiteCommand sq;
 
-                    sq = new SQLiteCommand(String.Format("delete from pay where fileno = '" + fileno.Text + "' and payer = '" + payer.Text +"' and receiveformcheck = '1'"), scn);
+                    sq = new SQLiteCommand(String.Format("delete from pay where fileno = '" + tempFileNo + "' and payer = '" + tempPayer +"' and receiveformcheck = '1'"), scn);
                     sq.ExecuteNonQuery();
 
                     sq = new SQLiteCommand(String.Format("insert into pay (date,payer,fileno,slipno,amount,received,remarks, receiveformcheck) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
@@ -90,9 +100,21 @@ namespace WindowsFormsApp3
                     sq.ExecuteNonQuery();
 
                     MessageBox.Show("Data Saved successfully");
-                    Close();
+                    scn.Close();
+                    this.Close();
+
                 }
             }
+        }
+
+        private void fileno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void payer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fileno.Items.AddRange(Sqlite.LoadFiles(payer.Text));
         }
     }
 }

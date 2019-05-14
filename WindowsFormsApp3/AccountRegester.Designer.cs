@@ -45,7 +45,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.mainComboBox = new System.Windows.Forms.ComboBox();
             this.subComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -143,7 +142,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(394, 32);
+            this.button2.Location = new System.Drawing.Point(205, 35);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(59, 27);
@@ -183,24 +182,10 @@
             this.label1.TabIndex = 92;
             this.label1.Text = "Search by";
             // 
-            // mainComboBox
-            // 
-            this.mainComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mainComboBox.FormattingEnabled = true;
-            this.mainComboBox.Items.AddRange(new object[] {
-            "Customer Ref No",
-            "File No",
-            "Client Name"});
-            this.mainComboBox.Location = new System.Drawing.Point(16, 34);
-            this.mainComboBox.Name = "mainComboBox";
-            this.mainComboBox.Size = new System.Drawing.Size(183, 24);
-            this.mainComboBox.TabIndex = 93;
-            this.mainComboBox.SelectedIndexChanged += new System.EventHandler(this.mainComboBox_SelectedIndexChanged);
-            // 
             // subComboBox
             // 
             this.subComboBox.FormattingEnabled = true;
-            this.subComboBox.Location = new System.Drawing.Point(205, 34);
+            this.subComboBox.Location = new System.Drawing.Point(16, 35);
             this.subComboBox.Name = "subComboBox";
             this.subComboBox.Size = new System.Drawing.Size(183, 24);
             this.subComboBox.TabIndex = 94;
@@ -212,7 +197,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 610);
             this.Controls.Add(this.subComboBox);
-            this.Controls.Add(this.mainComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
@@ -247,7 +231,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox mainComboBox;
         private System.Windows.Forms.ComboBox subComboBox;
     }
 }

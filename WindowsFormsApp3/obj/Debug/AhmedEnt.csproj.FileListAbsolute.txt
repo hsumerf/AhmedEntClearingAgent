@@ -628,3 +628,4 @@ C:\Users\H S Umer Farooq\Desktop\AhmedEntForDerive\AhmedEntClearingAgent\Windows
 C:\Users\H S Umer Farooq\Desktop\AhmedEntForDerive\AhmedEntClearingAgent\WindowsFormsApp3\obj\Debug\AhmedEnt.csproj.CoreCompileInputs.cache
 C:\Users\H S Umer Farooq\Desktop\AhmedEntForDerive\AhmedEntClearingAgent\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\H S Umer Farooq\Desktop\AhmedEntForDerive\AhmedEntClearingAgent\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\H S Umer Farooq\Desktop\AhmedEntForDerive\AhmedEntClearingAgent\WindowsFormsApp3\obj\Debug\AhmedEnt.csprojResolveAssemblyReference.cache

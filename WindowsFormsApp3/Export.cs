@@ -290,7 +290,8 @@ namespace WindowsFormsApp3
                     }
                 }
 
-              
+
+                sqliteDataReader.Close();
 
                 if (alreadyExistFileNo != filenobox.Text)
                 {
@@ -406,7 +407,7 @@ namespace WindowsFormsApp3
                 ntnnobox.Text = sqliteDataReader["clientntn"].ToString();
                 strnobox.Text = sqliteDataReader["clientstr"].ToString();
             }
-
+            sqliteDataReader.Close();
             sqliteConnection.Close();
 
             if (file_invoiceBox.Text == "")
